@@ -59,4 +59,4 @@ The ISRM Tool has a command called `check-setup` that allows the user to make su
 
 ----
 ## References
-[^1]: [Krewski et al., ...](https://www.healtheffects.org/publication/extended-follow-and-spatial-analysis-american-cancer-society-study-linking-particulate)
+[^1]: [Krewski et al., (2009) Extended Follow-Up and Spatial Analysis of the American Cancer Society Study Linking Particulate Air Pollution and Mortality. HEI Research Report 140.](https://www.healtheffects.org/publication/extended-follow-and-spatial-analysis-american-cancer-society-study-linking-particulate)
