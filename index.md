@@ -14,14 +14,16 @@ Last modified July 7, 2023
 ----
 
 ## Purpose and Goals
-The Intervention Model for Air Pollution (InMAP) is a powerful first step towards lowering key technical barriers by making simplifying assumptions that allow for streamlined predictions of PM<sub>2.5</sub> concentrations resulting from emissions-related policies or interventions.[^1] InMAP performance has been validated against observational data and WRF-Chem, and has been used to perform source attribution and exposure disparity analyses.[^2]() ^, [^3](https://doi.org/10.1073/pnas.1816102116) ^, [4](https://doi.org/10.1073/pnas.1818859116) The InMAP Source-Receptor Matrix (ISRM) was developed by running the full InMAP model tens of thousands of times to understand how a unit perturbation of emissions from each grid cell affects concentrations across the grid. However, both InMAP and the ISRM require considerable computational and math proficiency to run and an understanding of various atmospheric science principles to interpret. Furthermore, estimating health impacts requires additional knowledge and calculations beyond InMAP. Thus, a need arises for a standalone and user-friendly process for comparing air quality health disparities associated with various climate change policy scenarios.
+The Intervention Model for Air Pollution (InMAP) is a powerful first step towards lowering key technical barriers by making simplifying assumptions that allow for streamlined predictions of PM<sub>2.5</sub> concentrations resulting from emissions-related policies or interventions.[^1] InMAP performance has been validated against observational data and WRF-Chem, and has been used to perform source attribution and exposure disparity analyses.[^2], [^3], [^4] The InMAP Source-Receptor Matrix (ISRM) was developed by running the full InMAP model tens of thousands of times to understand how a unit perturbation of emissions from each grid cell affects concentrations across the grid. However, both InMAP and the ISRM require considerable computational and math proficiency to run and an understanding of various atmospheric science principles to interpret. Furthermore, estimating health impacts requires additional knowledge and calculations beyond InMAP. Thus, a need arises for a standalone and user-friendly process for comparing air quality health disparities associated with various climate change policy scenarios.
 
 The ultimate goal of this repository is to create a pipeline for estimating disparities in health impacts associated with incremental changes in emissions. Annual average PM<sub>2.5</sub> concentrations are estimated using the [InMAP Source Receptor Matrix](https://www.pnas.org/doi/full/10.1073/pnas.1816102116) for California.
 
 ----
-
+## References
 [^1]: [Tessum CW, Hill JD, Marshall JD (2017) InMAP: A model for air pollution interventions. PLOS ONE 12(4)](https://doi.org/10.1371/journal.pone.0176131).
 [^2]: [Tessum CW, et al., (2021) PM<sub>2.5</sub> polluters disproportionately and systemically affect people of color in the United States. Sci. Adv. 7.](https://doi.org/10.1126/sciadv.abf4491)
+[^3]: [Goodkind AL, et al., (2019) Fine-scale damage estimates of particulate matter pollution reveal opportunities for location-specific mitigation of emissions. PNAS 116 (18).](https://doi.org/10.1073/pnas.1816102116)
+[^4]: [Tessum CW, et al., (2019) Inequity in consumption of goods and services adds to racial-ethnic disparities in air pollution exposure. PNAS 116 (13).](https://doi.org/10.1073/pnas.1818859116)
 
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
 [GitHub Pages]: https://docs.github.com/en/pages
