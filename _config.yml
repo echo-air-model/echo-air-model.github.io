@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: ECHO-AIR
+description: Estimating Concentration and Health Outcomes - Automated ISRM Resource
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://echo-air-model.github.io
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
