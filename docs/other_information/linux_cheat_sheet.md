@@ -14,7 +14,7 @@ Instructions in the documentation assume some knowledge of Linux commands. Any L
     <th>Command</th><th>Usage</th><th>Example</th>
   </tr>
   <tr>
-    <td>(`vi`)</td><td>opens a document</td><td>`vi control_file.txt` will open the control file</td>
+    <td>(*vi*)</td><td>opens a document</td><td>`vi control_file.txt` will open the control file</td>
   </tr>
   <tr>
     <td>(`Esc`)+(`:q`)</td><td>closes a document</td><td>`:q` will close a document without changes</td>
