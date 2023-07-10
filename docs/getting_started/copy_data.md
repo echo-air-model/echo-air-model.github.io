@@ -1,0 +1,38 @@
+---
+layout: default
+title: 4. Copy Data
+parent: Getting Started
+nav_order: 5
+---
+
+## 4. Copy Data
+
+The following steps create a virtual Python environment to ensure the model is run with the correct Python libraries. These steps are identical regardless of operating system.
+
+1. Create a virtual Python environment.
+   ```bash
+python3 -m vent .
+       ```
+
+2. Activate the virtual environment.
+   ```bash
+source bin/activate 
+      ```
+
+If this worked successfully, you should see the directory name in parentheses before your terminal input.
+
+**screenshot**
+
+3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the Github was cloned.
+   ```bash
+python3 -m pip install -r requirements.txt
+      ```
+
+You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
+
+4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
+   ```bash
+python3 isrm_calcs.py -h
+      ```
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html)

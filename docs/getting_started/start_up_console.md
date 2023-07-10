@@ -37,21 +37,23 @@ sudo mount -t drives C: /mnt/c -o metadata
 3. Navigate to your C-drive and to the file path you have created as your working directory:
       ```bash
 cd ../../mnt/c/users/[your_name]/[your/file/path] 
-      ``` 
+         ``` 
 
 4. Update the privileges of the working directory.
-         ```bash
+   ```bash
 cd ..
 chmod 777 [working-directory]
 cd [working-directory]
-         ``` 
+      ``` 
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/download_packages_and_model.html)
 
 ----
 
 ### Google Cloud
-On the Compute Engine tab of the Google Cloud console, click the “SSH” button on your VM instance. This should pop up an SSH-in-browser window.
+The following instructions assume that the model should be copied into your home folder on your Google Cloud Console.
+
+1. On the Compute Engine tab of the Google Cloud console, click the “SSH” button on your VM instance. This should pop up an SSH-in-browser window.
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/download_packages_and_model.html)
 

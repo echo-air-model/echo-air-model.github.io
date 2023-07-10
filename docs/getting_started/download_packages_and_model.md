@@ -9,7 +9,7 @@ nav_order: 3
 
 The following steps configure your system to have the correct Linux packages, download the model from Github, and set up your virtual environment. These steps are identical regardless of operating system.
 
-1. Download necessary packages to the console.
+1. Download necessary packages to the console (this step may be unnecessary on Mac).
    ```bash
 sudo apt-get update 
 sudo apt-get install git
@@ -27,3 +27,6 @@ ls
 If this worked successfully, you should see the following. Note that the green text should say `[your_name]@[machine_name]`
 
 **screenshot**
+
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/create_virtual_environment.html)
