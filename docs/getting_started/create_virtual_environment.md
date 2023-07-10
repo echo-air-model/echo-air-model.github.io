@@ -29,7 +29,7 @@ source bin/activate
 python3 -m pip install -r requirements.txt
       ```
 
-   * You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
+      * You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
 
 {:style="counter-reset:step-counter 3"}
    4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
@@ -37,7 +37,7 @@ python3 -m pip install -r requirements.txt
 python3 isrm_calcs.py -h
       ```
 
-   * An example of the help message is below.
+      * An example of the help message is below.
 
 **screenshot**
 

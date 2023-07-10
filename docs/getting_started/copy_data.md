@@ -7,32 +7,156 @@ nav_order: 5
 
 ## 4. Copy Data
 
-The following steps create a virtual Python environment to ensure the model is run with the correct Python libraries. These steps are identical regardless of operating system.
+Now we will copy over the necessary data for running the pipeline. The required data files are located on [Google Drive](https://drive.google.com/drive/folders/14j-yB43YgZgPSPvhjxjdEbhLe6tR0SEc?usp=share_link). Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
 
-1. Create a virtual Python environment.
-   ```bash
-python3 -m vent .
-       ```
+The recommended method for copying the data files varies by operating system. Follow the link below to view your specific instructions.
 
-2. Activate the virtual environment.
+* [Mac](https://echo-air-model.github.io/docs/getting_started/copy_data.html#mac)
+* [WSL](https://echo-air-model.github.io/docs/getting_started/copy_data.html#wsl)
+* [Google Cloud](https://echo-air-model.github.io/docs/getting_started/copy_data.html#google-cloud)
+* [Savio](https://echo-air-model.github.io/docs/getting_started/copy_data.html#savio). 
+* [Direct to Terminal](https://echo-air-model.github.io/docs/getting_started/copy_data.html#direct-to-terminal): Use this method to copy files directly from Google Drive, regardless of operating system
+
+----
+
+### Mac
+
+1. Within the `isrm_health_calculations` folder in your Finder, create a new folder called "data".
+
+2. On your internet browser, navigate to the Google Drive link above.
+
+3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+
+----
+
+### WSL
+
+1. Within the `isrm_health_calculations` folder in your File Explorer, create a new folder called "data".
+
+2. On your internet browser, navigate to the Google Drive link above.
+
+3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+
+----
+
+### Google Cloud
+
+1. On your internet browser, navigate to the Google Drive link above.
+
+2. Download those files to your local machine. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
+
+3. On the Google Cloud Platform, navigate to the storage bucket that you are using for this project. 
+
+4. Create a folder within the bucket called "data" and upload all of the files you just downloaded by clicking and dragging.
+
+5. Go back to your SSH-in-browser window.
+
+6. Run the following command to authorize data transfers. Follow instructions as prompted.
    ```bash
-source bin/activate 
+gcloud auth login
       ```
 
-If this worked successfully, you should see the directory name in parentheses before your terminal input.
+7. Run the following code using the name of the bucket you created as `[bucket_name]`:
+   ```bash
+gsutil cp -r gs://[bucket_name]/data .
+      ```
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+
+----
+
+### Savio
+
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+
+----
+
+### Direct to Terminal
+
+The following code will copy the data directly from Google Drive to the ECHO-AIR model directory.
+
+1. In your terminal, create a directory inside the `isrm_health_calculations` directory called data and navigate to it:
+   ```bash
+mkdir data
+cd data
+      ```
+
+2. Install the `wget` function.
+   ```bash
+sudo apt-get install wget
+      ```
+
+3. Copy the following commands and run them in your terminal.
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1h_OWu9RqVLemOfx0RDpVnkfjNFiWrcf2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1h_OWu9RqVLemOfx0RDpVnkfjNFiWrcf2" -O air_basins.feather && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10cvQhV3nirdz1A1KXnBYPDCtPAMr8QbZ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10cvQhV3nirdz1A1KXnBYPDCtPAMr8QbZ" -O air_districts.feather && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1DvFp3vLiAMto8xng_5ku4VuNgAtbFcEr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1DvFp3vLiAMto8xng_5ku4VuNgAtbFcEr" -O benmap_incidence.feather && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1GAKWWPhCj8_pFp5EofwGpL3aYuWThlWa' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1GAKWWPhCj8_pFp5EofwGpL3aYuWThlWa" -O ca_border.feather && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1EinqyQgvIxKGZdJeNktkv-2AilycIscH' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1EinqyQgvIxKGZdJeNktkv-2AilycIscH" -O ca2010.feather && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1nBgU1BIVdVhFhlzoMJNpCCLOpLfFXMr9' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1nBgU1BIVdVhFhlzoMJNpCCLOpLfFXMr9" -O counties.feather && rm -rf /tmp/cookies.txt
+      ```
+
+4. Create a sub-directory called "CA_ISRM" and navigate to it.
+   ```bash
+mkdir CA_ISRM
+cd CA_ISRM
+      ```
+
+5. Copy the following commands to copy the data directly from Google Drive. Note: these may take a few minutes each, as these are very large files.
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1O2okLpnFWot6sAK92g11xDAMCMRGvPHF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1O2okLpnFWot6sAK92g11xDAMCMRGvPHF" -O isrm_geo.feather && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl" -O ISRM_NH3.npy && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1y__OvvXnzYQHjcQWgwX3a6_-8gvbjUPr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1y__OvvXnzYQHjcQWgwX3a6_-8gvbjUPr" -O ISRM_NOX.npy && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1O6GPVjLuTnJUmdWM2lt3p4w9UCoRBiB3' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1O6GPVjLuTnJUmdWM2lt3p4w9UCoRBiB3" -O ISRM_PM25.npy && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1NkWjYPaB7JJMGzUKckG_LI1UWeZaEZza' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1NkWjYPaB7JJMGzUKckG_LI1UWeZaEZza" -O ISRM_SOX.npy && rm -rf /tmp/cookies.txt
+      ```
+   ```bash
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1_owK9FszVIgQ2QICfLRCjIraJCf_hmb2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1_owK9FszVIgQ2QICfLRCjIraJCf_hmb2" -O ISRM_VOC.npy && rm -rf /tmp/cookies.txt
+      ```
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+
+----
+
+### Test Setup
+
+Once the data are all imported, navigate back to the main directory and run the `--check-setup` function.
+
+1. Ensure your working directory is open in your terminal.
+   ```bash
+pwd
+      ```
+   * This should return `[your/file/path]/working-directory/isrm_health_calculations`. If it does not, use `cd` to navigate up and down to get there.
+
+2. Run the following code:
+   ```bash
+python3 isrm_calcs.py --check-setup
+      ```
+   * If everything is configured correctly, you should get a message that says so.
 
 **screenshot**
 
-3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the Github was cloned.
-   ```bash
-python3 -m pip install -r requirements.txt
-      ```
 
-You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
-
-4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
-   ```bash
-python3 isrm_calcs.py -h
-      ```
-
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html)
