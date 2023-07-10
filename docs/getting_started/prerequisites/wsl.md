@@ -19,15 +19,16 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
       1. Open the command prompt on your Windows machine.
       2. Type the following: 
       ```bash
-	wsl --list --verbose
- 	```
+	 wsl --list --verbose
+	 ```
+
       {:style="counter-reset:step-counter 2"}
-      3. The setup is correct if you get the following output:
+         3. The setup is correct if you get the following output:
       [screenshot will go here]
 
    {:style="counter-reset:step-counter 1"}
-   2. If you are using WSL version 1, you can upgrade it using the following instructions:
-      1. In your Ubuntu environment, use the following command:
-      ```bash
-	wsl --set-version Ubuntu 2
-	```
+      2. If you are using WSL version 1, you can upgrade it using the following instructions:
+         1. In your Ubuntu environment, use the following command:
+         ```bash
+	    wsl --set-version Ubuntu 2
+	    ```
