@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MacOS
+title: MacOS Prerequisites
 parent: Prerequisites
 grand_parent: Getting Started
 nav_order: 2
