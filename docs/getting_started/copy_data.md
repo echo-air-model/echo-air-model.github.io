@@ -27,7 +27,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
 ----
 
@@ -39,7 +39,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
 ----
 
@@ -65,14 +65,15 @@ gcloud auth login
 gsutil cp -r gs://[bucket_name]/data .
       ```
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
 ----
 
 ### Savio
 
+...
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
 ----
 
@@ -137,7 +138,7 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1_owK9FszVIgQ2QICfLRCjIraJCf_hmb2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1_owK9FszVIgQ2QICfLRCjIraJCf_hmb2" -O ISRM_VOC.npy && rm -rf /tmp/cookies.txt
       ```
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test_setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
 ----
 
