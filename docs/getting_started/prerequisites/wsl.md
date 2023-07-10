@@ -23,9 +23,7 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
 	 ```
 
       {:style="counter-reset:step-counter 2"}
-         3. The setup is correct if you get the following output:
-      
-[screenshot will go here]
+         3. The setup is correct if you get the following output: **screenshot**
 
    {:style="counter-reset:step-counter 1"}
       2. If you are using WSL version 1, you can upgrade it using the following instructions:
