@@ -30,13 +30,13 @@ The following instructions start up the Ubuntu console and navigate to a working
 sudo umount /mnt/c 
 sudo mount -t drives C: /mnt/c -o metadata
       ``` 
-   {:style="counter-reset:step-counter 2"}
-   3. Navigate to your C-drive and to the file path you have created as your working directory:
+{:style="counter-reset:step-counter 2"}
+3. Navigate to your C-drive and to the file path you have created as your working directory:
       ```bash
 cd ../../mnt/c/users/[your_name]/[your/file/path] 
       ``` 
-      {:style="counter-reset:step-counter 3"}
-         4. Update the privileges of the working directory.
+{:style="counter-reset:step-counter 3"}
+4. Update the privileges of the working directory.
          ```bash
 cd ..
 chmod 777 [working-directory]
