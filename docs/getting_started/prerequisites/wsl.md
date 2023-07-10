@@ -24,7 +24,8 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
 
       {:style="counter-reset:step-counter 2"}
          3. The setup is correct if you get the following output:
-      [screenshot will go here]
+      
+[screenshot will go here]
 
    {:style="counter-reset:step-counter 1"}
       2. If you are using WSL version 1, you can upgrade it using the following instructions:
@@ -32,3 +33,12 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
          ```bash
 	    wsl --set-version Ubuntu 2
 	    ```
+
+         {:style="counter-reset:step-counter 1"}
+            2. If you get an error message like "Please enable Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS", you will need to update your system's settings. The following worked for a Windows 10 Pro AMD machine:
+
+               1. Restart machine and press "F2" or "Del" to access BIOS during startup.
+               2. In the "Advanced" Menu, enable SVM.
+               3. Save and exit.
+               4. Once the PC reboots, try to update the version using the command in the box above again.
+               5. If you are still having issues, see further instructions [here](https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html).
