@@ -1,11 +1,12 @@
 ---
 layout: default
-title: MacOS
+title: Prerequisites
 parent: Getting Started
+has_children: true
 nav_order: 2
 ---
 
-## Setting Up on Mac
+## Prerequisites
 
 The tool was developed on MacOS Monterey on the Apple M1 with 16 GB Memory. The instructions below may need to be adapted for different processing capabilities. These instructions assume a base level of comfort navigating your file directories in the terminal. For more information on commands you need for following these instructions, see [this article](https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/) on basic Mac OS commands.
 

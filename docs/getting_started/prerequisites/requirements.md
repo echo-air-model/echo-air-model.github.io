@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Requirements
-parent: Getting Started
+parent: Prerequisites
+grand_parent: Getting Started
 nav_order: 1
 ---
 
