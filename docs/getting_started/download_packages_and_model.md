@@ -26,4 +26,4 @@ ls
 
 If this worked successfully, you should see the following. Note that the green text should say `[your_name]@[machine_name]`
 
-![Screenshot of the directory once the repository is cloned](/assets/getting_started/mac_os/directory_setup_before_data.png)
+**screenshot**
