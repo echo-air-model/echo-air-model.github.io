@@ -25,6 +25,8 @@ The ultimate goal of this repository is to create a pipeline for estimating disp
 
 This website serves as the living documentation for the ECHO-AIR model. The navigation pane on the left will help you navigate through Getting Started, Running the Code, Technical Code Details, and any other additional supporting information.
 
+Currently, the model is configured and validated for California ISRM calculations. In the near future, I will validate it on the national ISRM as well. 
+
 ----
 ## References
 [^1]: [Tessum CW, Hill JD, Marshall JD (2017) InMAP: A model for air pollution interventions. PLOS ONE 12(4)](https://doi.org/10.1371/journal.pone.0176131).

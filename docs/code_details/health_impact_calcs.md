@@ -9,7 +9,7 @@ nav_order: 2
 ## `health_impact_calcs.py` 
 The `health_impact_calcs` script file contains a number of functions that help calculate health impacts from exposure concentrations.
 
-###`create_hia_inputs`
+### `create_hia_inputs`
 Creates the hia_inputs object.
 1. Inputs:
    * `pop`: population object input
