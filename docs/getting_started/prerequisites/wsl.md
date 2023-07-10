@@ -18,12 +18,14 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
    1. You can check your version of WSL as follows:
       1. Open the command prompt on your Windows machine.
       2. Type the following: 
-	```bash
+      ```bash
 	wsl --list --verbose
  	```
-	{:style="counter-reset:none"}
+      {:style="counter-reset:none"}
       3. The setup is correct if you get the following output:
       [screenshot will go here]
+
+   {:style="counter-reset:none"}
    2. If you are using WSL version 1, you can upgrade it using the following instructions:
       1. In your Ubuntu environment, use the following command:
       ```bash
