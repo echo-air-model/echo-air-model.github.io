@@ -4,7 +4,6 @@ theme: just-the-docs
 
 url: https://echo-air-model.github.io
 
-logo: "/assets/echo-air_logo-01.png"
 
 aux_links:
   ECHO-AIR: https://github.com/echo-air-model/echo-air
