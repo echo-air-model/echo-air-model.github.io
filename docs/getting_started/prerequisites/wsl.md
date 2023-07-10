@@ -21,7 +21,7 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
       ```bash
 	wsl --list --verbose
  	```
-      {:style="counter-reset:none"}
+   {:style="counter-reset:none"}
       3. The setup is correct if you get the following output:
       [screenshot will go here]
 
