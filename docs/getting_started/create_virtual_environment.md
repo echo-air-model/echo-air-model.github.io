@@ -22,8 +22,9 @@ source bin/activate
    * If this worked successfully, you should see the directory name in parentheses before your terminal input.
 
 **screenshot**
+
 {:style="counter-reset:step-counter 2"}
-3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the Github was cloned.
+   3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the Github was cloned.
    ```bash
 python3 -m pip install -r requirements.txt
       ```
@@ -31,7 +32,7 @@ python3 -m pip install -r requirements.txt
    * You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
 
 {:style="counter-reset:step-counter 3"}
-4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
+   4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
    ```bash
 python3 isrm_calcs.py -h
       ```
