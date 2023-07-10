@@ -2,7 +2,7 @@
 layout: default
 title: Concentration Layer Object
 parent: Supporting Code Objects
-grandparent: Code Details
+grand_parent: Code Details
 nav_order: 1
 ---
 
