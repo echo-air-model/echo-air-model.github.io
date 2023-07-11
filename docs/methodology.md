@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 ## Methodology ##
-The ISRM Health Calculation model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> concentrations as part of the **Concentration Module**. Second, the excess mortality resulting from the concentration change is calculated in the **Health Module**.
+The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> concentrations as part of the **Concentration Module**. Second, the excess mortality resulting from the concentration change is calculated in the **Health Module**.
 
 ### Concentration Module Methodology ###
 The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer for each of the five precursor species: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC). By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,705 sources by 21,705 receptors. The three elevations of release height within the ISRM are:
@@ -13,7 +13,7 @@ The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in re
 * Between 57 and 140 meters
 * Greater than 760 meters.
 
-The tool is capable of reading in a different ISRM, if specified by the user. 
+The model is capable of reading in a different ISRM, if specified by the user. 
 
 The units of each cell within the ISRM are micrograms per meter cubed per microgram per second, or concentration per emissions. 
 
@@ -23,7 +23,7 @@ The concentration module has the following steps. Details about the code handlin
 
 For each layer triggered in the preprocessing step: 
 
-2. **Emissions Re-Allocation**: the tool will re-grid emissions to the ISRM grid.
+2. **Emissions Re-Allocation**: the model will re-grid emissions to the ISRM grid.
    1. The emissions shape and the ISRM shape are intersected.
    2. Emissions for the intersection object are allocated from the original emissions shape by the percent of the original emissions area that is contained within the intersection.
    3. Emissions are summed by ISRM grid cell.
@@ -38,6 +38,7 @@ Once all layers are done:
 The ISRM Tool calculations health module follows US EPA BenMAP CE methodology and CARB guidance. 
 
 Currently, the tool is only built out to use the Krewski et al. (2009), endpoint parameters and functions.[^1] The Krewski function is as follows:
+
 ```math
 \Delta M = 1 - ( \frac{1}{\exp(\beta_{d} \times C_{i})} ) \times I_{i,d,g} \times P_{i,g}
 ```
@@ -55,7 +56,7 @@ Once all endpoints are done:
 3. **Export and Visualize**: excess mortality is exported as a shapefile and as a plot.
 
 ### Other Features ###
-The ISRM Tool has a command called `check-setup` that allows the user to make sure that all of the code and data files are properly saved and named in order to make sure that the program will run.
+ECHO-AIR has a command called `check-setup` that allows the user to make sure that all of the code and data files are properly saved and named in order to make sure that the program will run.
 
 ----
 ## References

@@ -10,6 +10,7 @@ nav_order: 4
 The following steps create a virtual Python environment to ensure the model is run with the correct Python libraries. These steps are identical regardless of operating system.
 
 1. Create a virtual Python environment.
+
    ```bash
 python3 -m venv .
        ```
@@ -34,7 +35,7 @@ python3 -m pip install -r requirements.txt
 {:style="counter-reset:step-counter 3"}
    4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
    ```bash
-python3 isrm_calcs.py -h
+python3 run_echo_air.py -h
       ```
 
       * An example of the help message is below.

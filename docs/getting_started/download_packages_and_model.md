@@ -19,8 +19,8 @@ sudo apt-get install python3-venv
 
 2. Download the ECHO-AIR Model and navigate to the directory created during cloning.
    ```bash
-git clone https://github.com/lkoolik/isrm_health_calculations.git
-cd isrm_health_calculations
+https://github.com/echo-air-model/echo-air.git
+cd echo-air
 ls
       ```
 

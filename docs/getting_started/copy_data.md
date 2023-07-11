@@ -21,7 +21,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 ### Mac
 
-1. Within the `isrm_health_calculations` folder in your Finder, create a new folder called "data".
+1. Within the `echo_air` folder in your Finder, open the folder called "data".
 
 2. On your internet browser, navigate to the Google Drive link above.
 
@@ -33,7 +33,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 ### WSL
 
-1. Within the `isrm_health_calculations` folder in your File Explorer, create a new folder called "data".
+1. Within the `echo_air` folder in your File Explorer, open the folder called "data".
 
 2. On your internet browser, navigate to the Google Drive link above.
 
@@ -55,12 +55,14 @@ The recommended method for copying the data files varies by operating system. Fo
 
 5. Go back to your SSH-in-browser window.
 
-6. Run the following command to authorize data transfers. Follow instructions as prompted.
+6. Make sure you are located in the `echo_air/data` folder.
+
+7. Run the following command to authorize data transfers. Follow instructions as prompted.
    ```bash
 gcloud auth login
       ```
 
-7. Run the following code using the name of the bucket you created as `[bucket_name]`:
+8. Run the following code using the name of the bucket you created as `[bucket_name]`:
    ```bash
 gsutil cp -r gs://[bucket_name]/data .
       ```
@@ -81,7 +83,7 @@ gsutil cp -r gs://[bucket_name]/data .
 
 The following code will copy the data directly from Google Drive to the ECHO-AIR model directory.
 
-1. In your terminal, create a directory inside the `isrm_health_calculations` directory called data and navigate to it:
+1. In your terminal, create a directory inside the `echo_air` directory called data and navigate to it:
    ```bash
 mkdir data
 cd data
@@ -150,11 +152,11 @@ Once the data are all imported, navigate back to the main directory and run the 
    ```bash
 pwd
       ```
-   * This should return `[your/file/path]/working-directory/isrm_health_calculations`. If it does not, use `cd` to navigate up and down to get there.
+   * This should return `[your/file/path]/working-directory/echo_air`. If it does not, use `cd` to navigate up and down to get there.
 
 2. Run the following code:
    ```bash
-python3 isrm_calcs.py --check-setup
+python3 run_echo_air.py --check-setup
       ```
    * If everything is configured correctly, you should get a message that says so.
 
