@@ -9,11 +9,19 @@ nav_order: 4
 
 The control file is the backbone of the entire model run. For more information about the control file, see the [Control File Specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
 
-If you are running on Mac or WSL, you can make and edit the control file in your file explorer and text editor. If you are using a Linux terminal or Google Cloud, you must do it through the command line.
+If you are running on Mac or WSL, you can make and edit the control file in your [file explorer and text editor](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-1-file-explorer-and-text-editor). If you are using a Linux terminal or Google Cloud, you must do it through the [command line](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-2-command-line).
 
 ### Option 1: File Explorer and Text Editor
 
-asdfsadf
+1. Using your file explorer, navigate to the `templates` folder of the ECHO-AIR model.
+
+2. Copy that text file and paste it in the `inputs` directory you have created with your input files.
+
+3. Open the control file using a text editor (e.g., Notepad++, TextEdit, Wordpad and edit the control file following the [specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
+
+4. Save and close.
+
+[-- Next Step -->]()
 
 ### Option 2: Command Line
 
@@ -23,25 +31,17 @@ cp /home/[your_name]/[your/file/path]/echo-air/templates/control_file_template.t
 mv control_file_template.txt [new_name].txt
       ```
 
-2. Ensure you are working with the latest version of the ECHO-AIR Model by pulling from Github. **You should do this every time you want to run it.**
-   ```bash
-git pull origin 
-      ```
-   * If you get a message that says "Already up to date", then nothing has updated.
+2. Edit the control file. If you are struggling to edit the file using the command line, you can download a copy of the control file from the Github repository online, make edits, and upload using the same process as you have previously uploaded files.
 
-4. If you have not already, create an inputs folder outside of the model directory. It should end up with the following path if you call `pwd` in this folder: `/home/[your_name]/[your/file/path]/inputs`
-   ```bash
-cd ..
-mkdir inputs
-      ```
+   1. Open the control file.
+      ```bash
+vi [control_file_name].txt 
+         ```
 
-   * If you are using Windows Subsystem for Linux (e.g., Ubuntu), this path may exist somewhere else. You can use your file explorer to find the path to your file, and then precede it with `/mnt/c/[your/file/path]`
+   2. Switch to insert mode by hitting `i`.
 
-5. Enter the inputs directory.
-   ```bash
-cd inputs  
-      ```
+   3. Edit the control file, following the [specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
 
-6. Confirm that your input files are stored in this directory by using `pwd`.
+   4. When you are done editing, hit `esc` and then type `:wq` and hit `enter`.
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/running_model/test_data.html)
+[-- Next Step -->]()
