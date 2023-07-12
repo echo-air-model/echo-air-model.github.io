@@ -21,7 +21,11 @@ If you are running on Mac or WSL, you can make and edit the control file in your
 
 4. Save and close.
 
-[-- Next Step -->]()
+5. As a final step, write down the current path so you have it on hand.
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/running_model/submit_run.html)
+
+----
 
 ### Option 2: Command Line
 
@@ -44,4 +48,6 @@ vi [control_file_name].txt
 
    4. When you are done editing, hit `esc` and then type `:wq` and hit `enter`.
 
-[-- Next Step -->]()
+3. As a final step, write down the current path so you have it on hand (use `pwd`).
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/running_model/submit_run.html)
