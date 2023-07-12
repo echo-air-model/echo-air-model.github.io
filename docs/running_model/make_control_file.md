@@ -7,16 +7,23 @@ nav_order: 4
 
 ## 2. Make Control File
 
-The first step is to prepare your input files (see [Input File Specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/input_file_specifications.html) for more details) and launch your terminal. 
+The control file is the backbone of the entire model run. For more information about the control file, see the [Control File Specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
 
-1. Start up your console (e.g., Mac Terminal, Windows Ubuntu, Linux terminal) following the same [process](https://echo-air-model.github.io/docs/getting_started/start_up_console.html) as described during setup. You do not need to reset the privileges if you have already set up the model.
+If you are running on Mac or WSL, you can make and edit the control file in your file explorer and text editor. If you are using a Linux terminal or Google Cloud, you must do it through the command line.
 
-2. Navigate to the directory where the model is saved (`[your/file/path]/echo-air`).
+### Option 1: File Explorer and Text Editor
+
+asdfsadf
+
+### Option 2: Command Line
+
+1. Create a copy of the control file from the templates folder. Rename the control file using the second line, if desired.
    ```bash
-cd [your/file/path]/echo-air  
+cp /home/[your_name]/[your/file/path]/echo-air/templates/control_file_template.txt .
+mv control_file_template.txt [new_name].txt
       ```
 
-3. Ensure you are working with the latest version of the ECHO-AIR Model by pulling from Github. **You should do this every time you want to run it.**
+2. Ensure you are working with the latest version of the ECHO-AIR Model by pulling from Github. **You should do this every time you want to run it.**
    ```bash
 git pull origin 
       ```
