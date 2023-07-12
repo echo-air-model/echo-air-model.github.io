@@ -24,10 +24,10 @@ This section provides the model with a naming structure for output files.
     <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
   </tr>
   <tr>
-    <td> `BATCH_NAME` </td><td> No </td><td> Provides a name for the batch of runs </td><td> `test` </td>
+    <td> BATCH_NAME </td><td> No </td><td> Provides a name for the batch of runs </td><td> test </td>
   </tr>
   <tr>
-    <td> `RUN_NAME` </td><td> No </td><td> Provides a run-specific name </td><td> `cy2000` </td>
+    <td> RUN_NAME </td><td> No </td><td> Provides a run-specific name </td><td> cy2000 </td>
   </tr>
 </table>
 
@@ -38,10 +38,10 @@ This section provides the model with a naming structure for output files.
     <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
   </tr>
   <tr>
-    <td> `EMISIONS_FILENAME` </td><td> Yes </td><td> Provides the path to the emissions file. For shapefiles, use the .shp file. </td><td> `/home/[your_name]/inputs/[input_folder]/demo_2000_data.shp` </td>
+    <td> EMISSIONS_FILENAME </td><td> Yes </td><td> Provides the path to the emissions file. For shapefiles, use the .shp file. </td><td> /home/[your_name]/inputs/[input_folder]/demo_2000_data.shp </td>
   </tr>
   <tr>
-    <td> `EMISSIONS_UNITS` </td><td> Yes </td><td> Provide the units for emissions </td><td> `ton/yr` </td>
+    <td> EMISSIONS_UNITS </td><td> Yes </td><td> Provide the units for emissions </td><td> ton/yr </td>
   </tr>
 </table>
 
@@ -52,10 +52,10 @@ This section provides the model with a naming structure for output files.
     <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
   </tr>
   <tr>
-    <td> `ISRM_FOLDER` </td><td> Yes </td><td> Provides the path to the folder containing the ISRM files </td><td> `/home/[your_name]/[your/path/here]/echo_air/data/CA_ISRM` </td>
+    <td> ISRM_FOLDER </td><td> Yes </td><td> Provides the path to the folder containing the ISRM files </td><td> /home/[your_name]/[your/path/here]/echo_air/data/CA_ISRM </td>
   </tr>
 <tr>
-    <td> `POPULATION_FILENAME` </td><td> Yes </td><td> Provides the path to the population file. For shapefiles, use the .shp file. </td><td> `/home/[your_name]/[your/path/here]/echo_air/data/ca2010.feather` </td>
+    <td> POPULATION_FILENAME </td><td> Yes </td><td> Provides the path to the population file. For shapefiles, use the .shp file. </td><td> /home/[your_name]/[your/path/here]/echo_air/data/ca2010.feather </td>
   </tr>
 </table>
 
@@ -66,10 +66,10 @@ This section provides the model with a naming structure for output files.
     <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
   </tr>
   <tr>
-    <td> `RUN_HEALTH` </td><td> No </td><td> Indicates whether you want health results. If blank, will run only concentrations. </td><td> `Y` </td>
+    <td> RUN_HEALTH </td><td> No </td><td> Indicates whether you want health results. If blank, will run only concentrations. </td><td> Y </td>
   </tr>
   <tr>
-    <td> `RACE_STRATIFIED_INCIDENCE` </td><td> No </td><td> Future option, currently does not do anything. </td><td> `N` </td>
+    <td> RACE_STRATIFIED_INCIDENCE </td><td> No </td><td> Future option, currently does not do anything. </td><td> N </td>
   </tr>
 </table>
 
@@ -80,10 +80,10 @@ This section provides the model with a naming structure for output files.
     <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
   </tr>
   <tr>
-    <td> `CHECK_INPUTS` </td><td> No </td><td> If enabled, will check all of your inputs and then exit. </td><td> `N` </td>
+    <td> CHECK_INPUTS </td><td> No </td><td> If enabled, will check all of your inputs and then exit. </td><td> N </td>
   </tr>
   <tr>
-    <td> `VERBOSE` </td><td> No </td><td> If enabled, it will output more logging statements. </td><td> `Y` </td>
+    <td> VERBOSE </td><td> No </td><td> If enabled, it will output more logging statements. </td><td> Y </td>
   </tr>
 </table>
 
@@ -94,18 +94,18 @@ This section provides the model with a naming structure for output files.
     <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
   </tr>
   <tr>
-    <td> `REGION_OF_INTEREST` </td><td> No </td><td> If provided an input, will output results only for this region. </td><td> leave blank </td>
+    <td> REGION_OF_INTEREST </td><td> No </td><td> If provided an input, will output results only for this region. </td><td> leave blank </td>
   </tr>
   <tr>
-    <td> `REGION_CATEGORY` </td><td> No </td><td> If provided an region of input, provide the type of region (e.g., AD = Air District, AB = Air Basin, C = County). </td><td> leave blank </td>
+    <td> REGION_CATEGORY </td><td> No </td><td> If provided an region of input, provide the type of region (e.g., AD = Air District, AB = Air Basin, C = County). </td><td> leave blank </td>
   </tr>
   <tr>
-    <td> `OUTPUT_RESOLUTION` </td><td> No </td><td> If provided, will aggregate results from ISRM grid cell to provided resolution. </td><td> leave blank </td>
+    <td> OUTPUT_RESOLUTION </td><td> No </td><td> If provided, will aggregate results from ISRM grid cell to provided resolution. </td><td> leave blank </td>
   </tr>
   <tr>
-    <td> `OUTPUT_EXPOSURE` </td><td> No </td><td> If enabled, will output population with concentration data. </td><td> leave blank </td>
+    <td> OUTPUT_EXPOSURE </td><td> No </td><td> If enabled, will output population with concentration data. </td><td> leave blank </td>
   </tr>
   <tr>
-    <td> `DETAILED_CONC` </td><td> No </td><td> If enabled, will output concentration data with additional columns for the precursor species </td><td> leave blank </td>
+    <td> DETAILED_CONC </td><td> No </td><td> If enabled, will output concentration data with additional columns for the precursor species </td><td> leave blank </td>
   </tr>
 </table>
