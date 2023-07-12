@@ -3,7 +3,7 @@ layout: default
 title: Emissions Input File
 parent: Input File Specifications
 grand_parent: Running the Model
-nav_order: 1
+nav_order: 2
 ---
 
 ## Emissions Input
