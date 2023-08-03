@@ -13,12 +13,12 @@ The following steps create a virtual Python environment to ensure the model is r
 
     ```bash
 python3 -m venv .
-        ```
+       ```
 
 2. Activate the virtual environment.
-   ```bash
+    ```bash
 source bin/activate 
-      ```
+       ```
 
    * If this worked successfully, you should see the directory name in parentheses before your terminal input.
 
