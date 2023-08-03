@@ -10,7 +10,6 @@ nav_order: 4
 The following steps create a virtual Python environment to ensure the model is run with the correct Python libraries. These steps are identical regardless of operating system.
 
 1. Create a virtual Python environment.
-
     ```bash
 python3 -m venv .
        ```
