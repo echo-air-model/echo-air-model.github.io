@@ -35,9 +35,9 @@ sudo mount -t drives C: /mnt/c -o metadata
       ``` 
 
 3. Navigate to your C-drive and to the file path you have created as your working directory:
-      ```bash
+   ```bash
 cd ../../mnt/c/users/[your_name]/[your/file/path] 
-         ``` 
+      ``` 
 
 4. Update the privileges of the working directory.
    ```bash
