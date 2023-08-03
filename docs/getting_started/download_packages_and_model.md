@@ -19,7 +19,7 @@ sudo apt-get install python3-venv
 
 2. Download the ECHO-AIR Model and navigate to the directory created during cloning.
    ```bash
-https://github.com/echo-air-model/echo-air.git
+git clone https://github.com/echo-air-model/echo-air.git
 cd echo-air
 ls
       ```
