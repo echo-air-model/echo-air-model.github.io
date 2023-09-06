@@ -7,9 +7,11 @@ nav_order: 3
 
 ## 2. Download Packages and Model
 
-The following steps configure your system to have the correct Linux packages, download the model from Github, and set up your virtual environment. These steps are identical regardless of operating system.
+The following steps configure your system to have the correct Linux packages, download the model from Github, and set up your virtual environment. 
 
-1. Download necessary packages to the console (this step may be unnecessary on Mac).
+### Linux and WSL
+
+1. Download necessary packages to the console.
    ```bash
 sudo apt-get update 
 sudo apt-get install git
@@ -17,6 +19,16 @@ sudo apt-get install build-essential
 sudo apt-get install python3-venv
       ```
 
+### Mac
+1. Download necessary packages to the console
+   ```bash
+brew update 
+brew install git
+brew install build-essential
+brew install python3-venv
+      ```
+
+### All Operating Systems
 2. Download the ECHO-AIR Model and navigate to the directory created during cloning.
    ```bash
 git clone https://github.com/echo-air-model/echo-air.git
