@@ -7,7 +7,7 @@ nav_order: 4
 
 ## 2. Make Control File
 
-The control file is the backbone of the entire model run. For more information about the control file, see the [Control File Specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
+The control file is the backbone of the entire model run. For more information about the control file, see the [Control File Specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html).
 
 If you are running on Mac or WSL, you can make and edit the control file in your [file explorer and text editor](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-1-file-explorer-and-text-editor). If you are using a Linux terminal or Google Cloud, you must do it through the [command line](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-2-command-line).
 
@@ -17,7 +17,7 @@ If you are running on Mac or WSL, you can make and edit the control file in your
 
 2. Copy that text file and paste it in the `inputs` directory you have created with your input files.
 
-3. Open the control file using a text editor (e.g., Notepad++, TextEdit, Wordpad and edit the control file following the [specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
+3. Open the control file using a text editor (e.g., Notepad++, TextEdit, Wordpad and edit the control file following the [specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html).
 
 4. Save and close.
 
@@ -44,7 +44,7 @@ vi [control_file_name].txt
 
    2. Switch to insert mode by hitting `i`.
 
-   3. Edit the control file, following the [specifications](https://echo-air-model.github.io/docs/running_model/input_file_specifications/control_file_input.html).
+   3. Edit the control file, following the [specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html).
 
    4. When you are done editing, hit `esc` and then type `:wq` and hit `enter`.
 
