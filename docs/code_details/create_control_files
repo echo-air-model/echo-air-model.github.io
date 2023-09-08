@@ -28,6 +28,3 @@ Finally, if indicated by the user, the model will begin the health module. It wi
 If enabled, the model utilizes parallel computing to increase efficiency and reduce runtime. As such, many of these steps do not happen exactly in the order presented above. 
 
 The program has completed when a box stating "Success! Run complete." shows on the screen.
-
-### Check Module
-If enabled in the control file, the program will run in `check` mode, which will run a number of checks built into the `emissions`, `isrm`, and `population` objects. Once it runs all checking functions, it will quit and inform the user of the result. 
