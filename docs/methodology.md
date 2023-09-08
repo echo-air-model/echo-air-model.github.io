@@ -39,7 +39,7 @@ The ISRM Tool calculations health module follows US EPA BenMAP CE methodology an
 
 Currently, the tool is only built out to use the Krewski et al. (2009), endpoint parameters and functions.[^1] The Krewski function is as follows:
 
-ΔM = (1 - (exp(β<sub>*d*</sub> * *ΔC*<sub>*i*</sub>)<sup>-1</sup>) * *I*<sub>*i*,*d*,*g*</sub> * *P*<sub>*i*,*g*</sub>
+   ΔM = (1 - (exp(β<sub>*d*</sub> x *ΔC*<sub>*i*</sub>)<sup>-1</sup>) x *I*<sub>*i*,*d*,*g*</sub> x *P*<sub>*i*,*g*</sub>
 
 where β is the endpoint parameter from Krewski et al. (2009), *d* is the disease endpoint, *C* is the concentration of PM<sub>2.5</sub>, *i* is the grid cell, *I* is the baseline incidence, *g* is the group, and *P* is the population estimate. The tool takes the following steps to estimate these concentrations.
 
