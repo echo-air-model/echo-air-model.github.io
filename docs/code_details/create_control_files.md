@@ -13,7 +13,16 @@ To use `create_control_files.py`, follow these steps.
 
 1. Create a copy of the batch_control_file_input_template.csv file that is saved in the echo-air directory under "templates".
 2. Open the copy of the file in a CSV-editor (e.g., Microsoft Excel, Google Sheets, notepad).
-3. Add a column for each of the control files you want to create, following the instructions for the [Control File Specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html).
+3. Add a column for each of the control files you want to create, following the instructions for the [Control File Specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html). Save this file as a CSV.
+4. Start up your console (e.g., Mac Terminal, Windows Ubuntu, Linux terminal) following the same [process](https://echo-air-model.github.io/docs/getting_started/start_up_console.html) as described during setup. Navigate to the echo-air directory.
+```bash
+cd [your/file/path]/echo-air
+   ```
+
+5. Call the `create_control_files.py` script through the terminal, substituting in the following inputs: where the snippet below says \[path/to/batch_control_file_input\], use the path to the file you edited as part of step 3; where the snippet below says \[path/to/outputs\], put the file path for where you want the control files to be saved.
+```bash
+python3 create_control_files.py -i '[path/to/batc_control_file_input]' -o '[path/to/outputs]'
+   ```
 
 ### Code Details
 The run program section of the code is split into two modes. If the CHECK_INPUTS flag is given, the tool will run in check mode, where it will check that each of the inputs is valid and then quit. If the CHECK_INPUTS flag is not given, the tool will run the full program. 
