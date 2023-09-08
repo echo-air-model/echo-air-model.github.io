@@ -9,7 +9,7 @@ nav_order: 4
 
 The control file is the backbone of the entire model run. For more information about the control file, see the [Control File Specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html).
 
-If you are running on Mac or WSL, you can make and edit the control file in your [file explorer and text editor](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-1-file-explorer-and-text-editor). If you are using a Linux terminal or Google Cloud, you must do it through the [command line](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-2-command-line).
+If you are running on Mac or WSL, you can make and edit the control file in your [file explorer and text editor](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-1-file-explorer-and-text-editor). If you are using a Linux terminal or Google Cloud, you must do it through the [command line](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-2-command-line). If you are running multiple runs, you may also consider using the [create_control_files script](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-3-create-control-files-script).
 
 ### Option 1: File Explorer and Text Editor
 
@@ -49,5 +49,13 @@ vi [control_file_name].txt
    4. When you are done editing, hit `esc` and then type `:wq` and hit `enter`.
 
 3. As a final step, write down the current path so you have it on hand (use `pwd`).
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/running_model/submit_run.html)
+
+----
+
+### Option 3: Create Control Files Script
+
+Follow the instructions [here](https://echo-air-model.github.io/docs/code_details/create_control_files.html).
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/running_model/submit_run.html)
