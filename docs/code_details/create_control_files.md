@@ -8,7 +8,7 @@ nav_order: 4
 ## `create_control_files.py`
 The `create_control_files.py` script is a helpful script file for generating control files for ECHO-AIR model runs. This script is not necessary for running ECHO-AIR, but may be helpful, especially in the case of batch running. The script will generate control files and a batch run script based on a CSV file input.
 
-### Using `create_control_files.py`
+### Creating Control Files
 To use `create_control_files.py`, follow these steps.
 
 1. Create a copy of the batch_control_file_input_template.csv file that is saved in the echo-air directory under "templates".
@@ -25,16 +25,12 @@ python3 create_control_files.py -i '[path/to/batc_control_file_input]' -o '[path
    ```
 
 ### Code Details
-The run program section of the code is split into two modes. If the CHECK_INPUTS flag is given, the tool will run in check mode, where it will check that each of the inputs is valid and then quit. If the CHECK_INPUTS flag is not given, the tool will run the full program. 
+The control file creation program is relatively simple in design. 
 
-It will start by creating a log file using the `setup_logging` function. Once the logging is set up, an output directory is created using the `create_output_dir` function from `tool_utils.py`. It will also create a shapefile subdirectory within the output folder directory using `create_shape_out`. The tool will also create an `output_region` geodataframe from user inputs for use in future steps.
+It will start by reading in the template control file that is stored within echo-air. That way, you will always start with the most up-to-date version of the control file. 
 
-Then, the model will begin the concentration module. This starts by defining an emissions object and an isrm object using the `emissions.py` and `isrm.py` supporting class objects. The concentrations will be estimated using the `concentration.py` object, which relies on the `concentration_layer.py` object. The concentrations will then be output as a map of total exposure concentration and a shapefile with detailed exposure information. 
+The program will then read the CSV file provided by the user to determine how many control files are desired by the user. 
 
-Next, the model will run environmental justice exposure calculations using the `create_exposure_df`, `get_overall_disparity`, and `estimate_exposure_percentile` functions from the `environmental_justice_calcs.py` file. The exposure percentiles will then be plotted and exported using the `plot_percentile_exposure` function. If the control file has indicated that exposure data should be output (using the 'OUTPUT_EXPOSURE' flag), a shapefile of exposure concentrations by population group will be output in the output directory.
+Next, the program will iterate through the columns of the provided csv file to create a control file for each column based on a copy of the template control file. It will also store the filepath of each generated control file to create a text file that has the batch commands you need to copy in order to run ECHO-AIR with your control files.
 
-Finally, if indicated by the user, the model will begin the health module. It will create the health input object using the `health_data.py` library and then estimate the three endpoints of excess mortality using `calculate_excess_mortality` from the `health_impact_calcs` file. Each endpoint will then be mapped and exported using `visualize_and_export_hia`.
-
-If enabled, the model utilizes parallel computing to increase efficiency and reduce runtime. As such, many of these steps do not happen exactly in the order presented above. 
-
-The program has completed when a box stating "Success! Run complete." shows on the screen.
+The program has completed when a box stating "Success! Script complete." shows on the screen.
