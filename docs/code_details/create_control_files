@@ -13,6 +13,7 @@ To use `create_control_files.py`, follow these steps.
 
 1. Create a copy of the batch_control_file_input_template.csv file that is saved in the echo-air directory under "templates".
 2. Open the copy of the file in a CSV-editor (e.g., Microsoft Excel, Google Sheets, notepad).
+3. Add a column for each of the control files you want to create, following the instructions for the [Control File Specifications](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html).
 
 ### Code Details
 The run program section of the code is split into two modes. If the CHECK_INPUTS flag is given, the tool will run in check mode, where it will check that each of the inputs is valid and then quit. If the CHECK_INPUTS flag is not given, the tool will run the full program. 
