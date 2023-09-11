@@ -45,6 +45,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `check_path`: uses the `path` library to check if the provided `file_path` exists and if the file is a file
 * `check_units`: checks that the provided units are valid against the `get_unit_conversions` dictionaries
 * `load_emissions`: detects the filetype of the emissions file and calls the appropriate load function
+* `check_id`: checks for I_CELL and J_CELL and adds them if they are missing
 * `load_shp`: loads the emissions data from a shapefile
 * `load_feather`: loads the emissions data from a feather file
 * `load_csv`: loads the emissions data from a csv file
