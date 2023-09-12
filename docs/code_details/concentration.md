@@ -13,6 +13,7 @@ The `concentration` object runs ISRM-based calculations for each of the vertical
 * `emis_obj`: the emissions object, as defined by `emissions.py`
 * `isrm_obj`: the ISRM object, as defined by `isrm.py`
 * `detailed_conc_flag`: a Boolean indicating whether concentrations should be output at a detailed level or not
+* `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Attributes
 * `isrm_id`: a Series of all ISRM grid cell IDs
