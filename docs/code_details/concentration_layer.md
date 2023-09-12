@@ -21,6 +21,7 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `crs`: the coordinate reference system associated with the ISRM grid
 * `name`: a string representing the run name preferred by the user
 * `check`: a Boolean indicating whether the program should run, or if it should just check the inputs (useful for debugging)
+* `run_parallel`: a Boolean indicating whether or not to run in parallel
 * `verbose`: a Boolean indicating whether the user wants to run in verbose mode
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
 
