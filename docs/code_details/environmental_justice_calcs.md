@@ -84,6 +84,7 @@ Calls the other exposure justice functions in order
    * `conc`: concentration object from `concentration.py`
    * `isrm_pop_alloc`: population object (from `population.py`) re-allocated to the ISRM grid cell geometry
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs:
    * `exposure_gdf`: a dataframe containing the exposure concentrations and population estimates for each group
    * `exposure_pctl`: a dataframe of exposure concentrations by percentile of population exposed by group
