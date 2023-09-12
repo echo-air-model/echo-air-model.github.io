@@ -13,6 +13,9 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `emis_obj`: the emissions object, as defined by `emissions.py`
 * `isrm_obj`: the ISRM object, as defined by `isrm.py`
 * `layer`: the layer number (0, 1, or 2)
+* `run_parallel`: a Boolean indicating whether or not to run in parallel
+* `verbose`: a Boolean indicating whether the user wants to run in verbose mode
+* `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Attributes
 * `isrm_id`: a Series of all ISRM grid cell IDs
@@ -21,9 +24,6 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `crs`: the coordinate reference system associated with the ISRM grid
 * `name`: a string representing the run name preferred by the user
 * `check`: a Boolean indicating whether the program should run, or if it should just check the inputs (useful for debugging)
-* `run_parallel`: a Boolean indicating whether or not to run in parallel
-* `verbose`: a Boolean indicating whether the user wants to run in verbose mode
-* `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Calculated Attributes
 * `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`: geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
