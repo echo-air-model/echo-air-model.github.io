@@ -19,6 +19,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `filter_dict`: filters the emissions inputs based on inputted dictionary (not fully built out yet)
 * `load_file`: a Boolean indicating whether or not the file should be loaded (for debugging)
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+* `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Attributes
 * `valid_file`: a Boolean indicating whether or not the file provided is valid
