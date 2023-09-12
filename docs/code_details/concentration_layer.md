@@ -22,6 +22,7 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `name`: a string representing the run name preferred by the user
 * `check`: a Boolean indicating whether the program should run, or if it should just check the inputs (useful for debugging)
 * `verbose`: a Boolean indicating whether the user wants to run in verbose mode
+* `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Calculated Attributes
 * `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`: geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
