@@ -15,6 +15,7 @@ The `isrm` object loads, stores, and manipulates the ISRM grid data.
 * `region_of_interest`: the name of the region contained in the `output_region`
 * `load_file`: a Boolean indicating whether or not the file should be loaded (for debugging)
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+* `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Attributes
 * `nh3_path`, `nox_path`, `pm25_path`, `sox_path`, `voc_path`: the filepath strings for each of the primary pollutant ISRM variables
