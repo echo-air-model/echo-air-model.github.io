@@ -14,7 +14,8 @@ The `health_data` object stores and manipulates built-in health data (population
 * `incidence_fp`: a string containing the file path to the background incidence dataset
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 * `race_stratified`: a Boolean indicating whether race-stratified incidence rates should be used
-
+* `debug_mode`: a Boolean indicating whether or not to output debug statements
+  
 ### Calculated Attributes
 * `population`: a geodataframe containing the population allocated to the ISRM grid geometry
 * `incidence`: a geodataframe containing the raw incidence data from BenMAP
