@@ -17,6 +17,7 @@ Creates the hia_inputs object.
    * `verbose`: a Boolean telling the program to return additional log statements or not
    * `geodata`: the geographic data from the ISRM
    * `incidence_fp`: a string containing the filepath where the incidence data is stored
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs:
    * a health data object ready for health calculations
 3. Methodology
@@ -156,6 +157,7 @@ Calls `plot_total_mortality` and `export_health_impacts` in one clean function c
    * `f_out`: the name of the file output category (will append additional information) 
    * `shape_out`: a filepath string for shapefiles
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `hia_summary`: a summary dataframe containing population, excess mortality, and excess mortality rate per demographic group
 3. Methodology:
