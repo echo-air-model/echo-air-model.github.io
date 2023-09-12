@@ -55,6 +55,7 @@ Estimates excess mortality for a given `endpoint` and `function`
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `function`: the health impact function of choice (currently only `krewski` is built out)
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `pop_inc_conc`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
 3. Methodology:
@@ -77,6 +78,7 @@ Creates a map image (PNG) of the excess mortality associated with an `endpoint` 
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
 3. Methodology:
@@ -103,6 +105,7 @@ Exports mortality as a shapefile
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
 3. Methodology:
@@ -118,6 +121,7 @@ Exports mortality as a csv
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
 3. Methodology:
@@ -132,7 +136,8 @@ Creates a summary table of health impacts by racial/ethnic group
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `l`: an intermediate string that has the endpoint label string (e.g., ACM_)
-   * `endpoint_nice`: an intermediate string that has a nicely formatted version of the endpoint (e.g., All Cause) 
+   * `endpoint_nice`: an intermediate string that has a nicely formatted version of the endpoint (e.g., All Cause)
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `hia_summary`: a summary dataframe containing population, excess mortality, and excess mortality rate per demographic group
 3. Methodology:
