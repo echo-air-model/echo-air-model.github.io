@@ -38,10 +38,14 @@ Sets up the verbose printing mechanism for global usage
 1. Inputs:
    * `verbose`: a Boolean indicating if it is in verbose mode or not
    * `text`: a string to be returned if the program is in verbose mode
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `frameinfo`: inspect object that provides information about the line making the function call
 2. Outputs: None
 3. Methodology:
    1. Checks if verbose is True.
-   2. If True, creates a log statement.
+   2. If True:
+      1. Checks for debug mode. If it is running in debug, it will add the script name and line number that made the function call to `verboseprint` to the log statement text.
+      2. Creates a log statement.
    3. If False, does nothing. 
 
 ### `report_version` 
