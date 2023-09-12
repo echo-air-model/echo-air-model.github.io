@@ -15,6 +15,7 @@ Creates a dataframe ready for exposure calculations
    * `conc`: concentration object from `concentration.py`
    * `isrm_pop_alloc`: population object (from `population.py`) re-allocated to the ISRM grid cell geometry
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
 3. Methodology:
@@ -141,6 +142,7 @@ Creates a plot of exposure concentration by percentile of each group's populatio
    * `f_out`: the name of the file output category (will append additional information)
    * `exposure_pctl`: a dataframe of exposure concentrations by percentile of population exposed by group
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs:
    * The function does not return anything, but a lineplot image (PNG) will be output into the `output_dir`.
 3. Methodology:
@@ -159,7 +161,8 @@ Calls each of the exposure output functions in parallel
    * `shape_out`: a filepath string of the location of the shapefile output directory
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information)
-   * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed 
+   * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs:
    * The function does not return anything, but a shapefile will be output into the `output_dir`.
 3. Methodology:
