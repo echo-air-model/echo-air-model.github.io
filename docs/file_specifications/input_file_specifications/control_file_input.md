@@ -109,3 +109,120 @@ This section provides the model with a naming structure for output files.
     <td> DETAILED_CONC </td><td> No </td><td> If enabled, will output concentration data with additional columns for the precursor species </td><td> leave blank </td>
   </tr>
 </table>
+
+### Options for Output Regions
+The following keywords are pre-programmed for use in ECHO-AIR for evaluating specific regions in California. All of the key words should be input in all capitals. Jump ahead to [Air Basins](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html#Air_Basins), Air Districts, and Counties.
+
+#### Air Basins
+* GREAT BASIN VALLEYS
+* LAKE COUNTY
+* LAKE TAHOE
+* MOJAVE DESERT
+* MOUNTAIN COUNTIES
+* NORTH CENTRAL COAST
+* NORTH COAST
+* NORTHEAST PLATEAU
+* SACRAMENTO VALLEY
+* SALTON SEA
+* SAN DIEGO COUNTY
+* SAN FRANCISCO BAY
+* SAN JOAQUIN VALLEY
+* SOUTH CENTRAL COAST
+* SOUTH COAST
+
+#### Air Districts
+* AMADOR
+* ANTELOPE VALLEY
+* BAY AREA
+* BUTTE
+* CALAVERAS
+* COLUSA
+* EL DORADO
+* FEATHER RIVER
+* GLENN
+* GREAT BASIN UNIFIED
+* IMPERIAL
+* KERN
+* LAKE
+* LASSEN
+* MARIPOSA
+* MENDOCINO
+* MODOC
+* MOJAVE DESERT
+* MONTEREY BA UNIFIED
+* NORTH COAST UNIFIED
+* NORTHERN SIERRA
+* NORTHERN SONOMA
+* PLACER
+* SACRAMENTO METRO
+* SAN DIEGO
+* SAN JOAQUIN VALLEY UNIFIED
+* SAN LUIS OBISPO
+* SANTA BARBARA
+* SHASTA
+* SISKIYOU
+* SOUTH COAST
+* TEHAMA
+* TUOLUMNE
+* VENTURA
+* YOLO-SOLANO
+
+#### Counties
+* ALAMEDA
+* ALPINE
+* AMADOR
+* BUTTE
+* CALAVERAS
+* COLUSA
+* CONTRA COSTA
+* DEL NORTE
+* EL DORADO
+* FRESNO
+* GLENN
+* HUMBOLDT
+* IMPERIAL
+* INYO
+* KERN
+* KINGS
+* LAKE
+* LASSEN
+* LOS ANGELES
+* MADERA
+* MARIN
+* MARIPOSA
+* MENDOCINO
+* MERCED
+* MODOC
+* MONO
+* MONTEREY
+* NAPA
+* NEVADA
+* ORANGE
+* PLACER
+* PLUMAS
+* RIVERSIDE
+* SACRAMENTO
+* SAN BENITO
+* SAN BERNARDINO
+* SAN DIEGO
+* SAN FRANCISCO
+* SAN JOAQUIN
+* SAN LUIS OBISPO
+* SAN MATEO
+* SANTA BARBARA
+* SANTA CLARA
+* SANTA CRUZ
+* SHASTA
+* SIERRA
+* SISKIYOU
+* SOLANO
+* SONOMA
+* STANISLAUS
+* SUTTER
+* TEHAMA
+* TRINITY
+* TULARE
+* TUOLUMNE
+* VENTURA
+* YOLO
+* YUBA
