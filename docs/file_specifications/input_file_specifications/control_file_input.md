@@ -108,6 +108,9 @@ This section provides the model with a naming structure for output files.
   <tr>
     <td> DETAILED_CONC </td><td> No </td><td> If enabled, will output concentration data with additional columns for the precursor species </td><td> leave blank </td>
   </tr>
+  <tr>
+    <td> OUTPUT_EMIS </td><td> No </td><td> If enabled, will output emissions allocated to the ISRM grid </td><td> leave blank </td>
+  </tr>
 </table>
 
 ### Options for Output Regions
