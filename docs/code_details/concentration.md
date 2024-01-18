@@ -13,6 +13,9 @@ The `concentration` object runs ISRM-based calculations for each of the vertical
 * `emis_obj`: the emissions object, as defined by `emissions.py`
 * `isrm_obj`: the ISRM object, as defined by `isrm.py`
 * `detailed_conc_flag`: a Boolean indicating whether concentrations should be output at a detailed level or not
+* `run_parallel`: a Boolean indicating whether or not to run in parallel
+* `output_dir`: a string pointing to the output directory
+* `output_emis_flag`: a Boolean indicating whether ISRM-allocated emissions should be output
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
 
 ### Attributes
