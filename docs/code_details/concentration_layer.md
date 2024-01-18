@@ -13,6 +13,8 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `emis_obj`: the emissions object, as defined by `emissions.py`
 * `isrm_obj`: the ISRM object, as defined by `isrm.py`
 * `layer`: the layer number (0, 1, or 2)
+* `output_dir`: a string pointing to the output directory
+* `output_emis_flag`: a Boolean indicating whether ISRM-allocated emissions should be output
 * `run_parallel`: a Boolean indicating whether or not to run in parallel
 * `verbose`: a Boolean indicating whether the user wants to run in verbose mode
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
@@ -34,6 +36,7 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `allocate_emissions`: inputs the emissions layer and the ISRM geography, and re-allocates the emissions to the ISRM geography using an area-based allocation procedure
 * `cut_emissions`: inputs the pollutant geodataframe from the emissions object and slices it based on the minimum and maximum release heights (minimum inclusive, maximum exclusive) associated with the ISRM vertical layer
 * `process_emissions`: for each of the five primary pollutants, runs `cut_emissions` and then `allocate_emissions` to return the geodataframes of emissions of each primary pollutant released in the `layer` allocated to the ISRM grid
+* `save_allocated_emis`: outputs ISRM-allocated emissions to a shapefile
 * `get_concentration`: for a pollutant's emission layer (`POLe`), the ISRM matrix for that pollutant, and the `layer` ID, estimates the concentration at ground-level for the primary pollutant (`pPOL`)
 * `combine_concentrations`: merges together all five of the primary pollutant concentration geodataframes (`pPOL`) and adds them together to get total ground-level concentrations resulting from emissions released in that `layer`
 
