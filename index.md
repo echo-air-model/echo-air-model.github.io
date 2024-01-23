@@ -10,7 +10,7 @@ A repository of scripts used for converting emissions to concentrations and heal
 
 *Libby H. Koolik, Álvaro Alvarado, Amy Budahn, Laurel Plummer, Julian D. Marshall, and Joshua S. Apte*
 
-Last modified January 18, 2024
+Last modified January 23, 2024
 
 <b>Note: this website is currently under construction and is being actively updated.</b>
 
@@ -27,6 +27,16 @@ The ultimate goal of this repository is to create a pipeline for estimating disp
 This website serves as the living documentation for the ECHO-AIR model. The navigation pane on the left will help you navigate through Getting Started, Running the Code, Technical Code Details, and any other additional supporting information.
 
 Currently, the model is configured and validated for California ISRM calculations. In the near future, I will validate it on the national ISRM as well. 
+
+----
+## Intended Uses
+
+ECHO-AIR strikes a balance between the high spatial resolution required to assess PM<sub>2.5</sub> exposure disparities and the complexity of air quality modeling and was designed to support California Office of Environmental Health Hazard Assessment’s (OEHHA):
+
+* Analyses of the benefits and impacts of California’s climate policies in disadvantaged communities and to explore environmental justice disparities in PM<sub>2.5</sub> exposure and mortality. This includes evaluation of relative changes in PM<sub>2.5</sub> exposure and mortality between two or more timepoints or scenarios.
+* Estimates PM<sub>2.5</sub> exposure using InMAP, a reduced complexity air quality model.
+ 
+ECHO-AIR is well suited for projects investigating environmental justice issues, those requiring many modeling runs, or with limited resources to run complex air quality models. However, the ECHO-AIR tool is not a substitute for comprehensive chemical transport models; designed to evaluate absolute changes in PMd<sub>2.5</sub> exposure and mortality; nor appropriate to apply to the neighborhood scale due to complexities in the modeling and the need for highly spatially resolved data sets.
 
 ----
 ## References
