@@ -122,7 +122,7 @@ cd CA_ISRM
 
 5. Copy the following commands to copy the data directly from Google Drive. Note: these may take a few minutes each, as these are very large files.
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1O2okLpnFWot6sAK92g11xDAMCMRGvPHF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1O2okLpnFWot6sAK92g11xDAMCMRGvPHF" -O isrm_geo.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1fzYgvojGrkWpeDg09smNzCGuV8-P0xzz' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1fzYgvojGrkWpeDg09smNzCGuV8-P0xzz" -O isrm_geo.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl" -O ISRM_NH3.npy && rm -rf /tmp/cookies.txt
