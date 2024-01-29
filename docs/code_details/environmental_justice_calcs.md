@@ -171,6 +171,49 @@ Calls each of the exposure output functions in parallel
    2. Updates the columns slightly for shapefile naming
    3. Exports the shapefile.
 
+### `region_pwm_helper`
+Estimates population-weighted mean for a subset of the full_dataset.
+1. Inputs: None
+   * `name`: the specific name of the region type (e.g., SF BAY AREA)
+   * `group`: the racial/ethnic group of interest
+   * `full_dataset`: a dataframe containing all of the concentraion and population intersection objects with regions assigned
+2. Outputs:
+   * `pwm`: the population-weighted mean concentration of PM<sub>2.5</sub>
+3. Methodology:
+   1. Slices a releevant part of the full dataset using the `NAME` column.
+   2. Estimates the population-weighted mean for that geographic area only.
+
+### `export_pwm_map`
+Creates the exports for the population-weighted products requested when the user inputs an output resolution larger than the ISRM grid
+1. Inputs: 
+   * `pop_exp`: a dataframe containing the population information without age-resolution
+   * `conc`: a concentration object
+   * `output_dir`: a filepath string of the location of the output directory
+   * `output_region`: the geometry of the desired output region
+   * `f_out`: the name of the file output category (will append additional information)
+   * `ca_shp_path`: a filepath string of the location of the California boundary shapefile
+   * `shape_out`: a filepath string of the location of the shapefile output directory
+2. Outputs: None
+3. Methodology:
+   1. Combines the concentration data, geographic areas data, and the population data by intersecting all three together.
+   2. Estimates the population counts for each group in each of these intersected areas.
+   3. Estimates the population-weighted mean concentration for each group for each geographic subarea.
+   4. Plots this data on a chloropleth map using the `visualize_pwm_conc` function.
+   5. Outputs this summary data as a shapefile and as a csv.
+
+### `visualize_pwm_conc`
+Creates map of PWM concentrations using simple chloropleth.
+1. Inputs: 
+   * `output_res_geo`: a dataframe containing the population-weighted mean concentrations for each output resolution
+   * `output_region`: the geometry of the desired output region
+   * `output_dir`: a filepath string of the location of the output directory
+   * `f_out`: the name of the file output category (will append additional information)
+   * `ca_shp_path`: a filepath string of the location of the California boundary shapefile
+2. Outputs: None
+3. Methodology:
+   1. Reads in the California boundary file and projects it to the matching coordinate reference system.
+   2. Creates a matching map to the one created in `concentration.visualize_concentrations()`.
+
 ### `create_rename_dict`
 Makes a global rename code dictionary for easier updating
 1. Inputs: None
