@@ -35,6 +35,7 @@ The `control_file` object is used to check and read the control file for a run:
 * `get_all_inputs`: imports all values from the control file
 * `get_region_dict`: loads all of the acceptable values for the various regions
 * `region_check_helper`: a helper function for checking the region of interest and region category inputs
+* `out_res_check_helper`: a helper function for checking the output resolution input
 * `check_inputs`: checks that all inputs are valid once imported
 
 ### External Functions
