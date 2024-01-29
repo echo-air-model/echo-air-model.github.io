@@ -125,10 +125,10 @@ cd CA_ISRM
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1fzYgvojGrkWpeDg09smNzCGuV8-P0xzz' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1fzYgvojGrkWpeDg09smNzCGuV8-P0xzz" -O isrm_geo.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl" -O ISRM_NH3.npy && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1I4CC88ykpE_WzdjUEry35pqsBE6Aaaex' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1I4CC88ykpE_WzdjUEry35pqsBE6Aaaex" -O ISRM_NH3.npy && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1y__OvvXnzYQHjcQWgwX3a6_-8gvbjUPr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1y__OvvXnzYQHjcQWgwX3a6_-8gvbjUPr" -O ISRM_NOX.npy && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1mneFJEfsGKLIz4xzGEcVVLFW_C7y7ynd' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1mneFJEfsGKLIz4xzGEcVVLFW_C7y7ynd" -O ISRM_NOX.npy && rm -rf /tmp/cookies.txt
       ```
    ```bash
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1O6GPVjLuTnJUmdWM2lt3p4w9UCoRBiB3' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1O6GPVjLuTnJUmdWM2lt3p4w9UCoRBiB3" -O ISRM_PM25.npy && rm -rf /tmp/cookies.txt
