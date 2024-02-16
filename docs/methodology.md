@@ -13,6 +13,8 @@ The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in re
 * Between 57 and 140 meters
 * Greater than 760 meters.
 
+If your run includes emissions occurring between 140 and 760 meters, please see the additional documentation [here](https://echo-air-model.github.io/docs/other_information/isrm_hole_patch.html).
+
 The model is capable of reading in a different ISRM, if specified by the user. 
 
 The units of each cell within the ISRM are micrograms per meter cubed per microgram per second, or concentration per emissions. 
