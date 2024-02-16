@@ -59,7 +59,7 @@ The results of all four strategies are shown below for emissions in 2012 and 201
 
 ![Average concentration (spatial and population-weighted) for stack emissions in 2017](/assets/hole_patch_images/testing_method_2017.png)
 
-Based on these results, we are opting for Option 3 (Average L2 and L3) because it is the most reasonable middle-estimate between these bounds. 
+Based on these results, we are opting for Option 3 (Average L1 and L2) because it is the most reasonable middle-estimate between these bounds. 
 
 #### Testing ECHO-AIR
 Finally, we look at the results of this choice by looking at the spatial patterns of impacts that result from emissions occurring in the hole, given the choice of averaging L1 and L2. We ran both (1) the full 2012 stack emissions and (2) all stack emissions occurring outside the hole through ECHO-AIR and substracted the differences. The spatial pattern in the San Francisco Bay Area is shown below. Sources that release in the hole are marked as small purple circles.
