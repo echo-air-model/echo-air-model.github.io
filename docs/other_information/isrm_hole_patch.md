@@ -37,7 +37,7 @@ As a final note on this page, we performed a simple test of four potential solut
 #### Emissions Release Height
 The first test done here asks the question: what fraction of emissions from California's Cap-and-Trade regulated facilities are released in the hole? We assigned layer labels to each reported emissions in the 2012 to 2017 Cap-and-Trade data and normalized by the total emissions of each pollutant. 
 
-**** Image **** 
+![Emissions by release layer](/assets/hole_patch_images/emission_by_layer.png)
 
 A few key takeaways: 
 * The hole accounted for less of the total emissions in 2017 than in 2012
@@ -55,16 +55,16 @@ The next test compares four potential strategies for patching the hole to bound 
 
 The results of all four strategies are shown below for emissions in 2012 and 2017.
 
-**** Image for 2012 ****
+![Average concentration (spatial and population-weighted) for stack emissions in 2012](/assets/hole_patch_images/testing_method_2012.png)
 
-**** Image for 2017 ****
+![Average concentration (spatial and population-weighted) for stack emissions in 2017](/assets/hole_patch_images/testing_method_2017.png)
 
 Based on these results, we are opting for Option 3 (Average L2 and L3) because it is the most reasonable middle-estimate between these bounds. 
 
 #### Testing ECHO-AIR
-Finally, we look at the results of this choice by looking at the spatial patterns of impacts that result from emissions occurring in the hole, given the choice of averaging L1 and L2. We ran both (1) the full 2012 stack emissions and (2) all stack emissions occurring outside the hole through ECHO-AIR and substracted the differences. The spatial pattern in the San Francisco Bay Area is shown below.
+Finally, we look at the results of this choice by looking at the spatial patterns of impacts that result from emissions occurring in the hole, given the choice of averaging L1 and L2. We ran both (1) the full 2012 stack emissions and (2) all stack emissions occurring outside the hole through ECHO-AIR and substracted the differences. The spatial pattern in the San Francisco Bay Area is shown below. Sources that release in the hole are marked as small purple circles.
 
-*** image from ECHO-AIR differences ***
+![Map of spatial differences in the San Francisco Bay Area](/assets/hole_patch_images/spatial_differences.png)
 
 Additionally, it is useful to contextualize these results in the greater picture of population exposure. To do this, we compare the population-weighted means estimated from each of these scenarios as:
 1. Full stack PWM: 0.47 ug/m<sup>3</sup>
