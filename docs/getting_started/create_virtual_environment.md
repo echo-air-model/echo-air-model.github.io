@@ -24,7 +24,7 @@ source bin/activate
 
    * If this worked successfully, you should see the directory name in parentheses before your terminal input.
 
-**screenshot**
+![Screenshot of the directory after we activate virtual environment](https://github.com/echo-air-model/echo-air-model.github.io/blob/add-screenshots-where-noted/assets/getting_started/mac_os/bin_activate_screenshot.png?raw=true)
 
 {:style="counter-reset:step-counter 2"}
    3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the Github was cloned.
@@ -43,7 +43,7 @@ python3 run_echo_air.py -h
 
       * An example of the help message is below.
 
-**screenshot**
+![Screenshot of help message](https://github.com/echo-air-model/echo-air-model.github.io/blob/add-screenshots-where-noted/assets/getting_started/mac_os/virtual_environment_help_message.png?raw=true)
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html)
 
