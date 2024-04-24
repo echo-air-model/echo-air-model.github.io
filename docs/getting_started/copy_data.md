@@ -25,7 +25,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 2. On your internet browser, navigate to the Google Drive link above.
 
-3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
+3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM. Verify that there are five NumPy files labeled with .npy extension in the 'CA_ISRM' directory, and ensure that each file is approximately 5.65 GB in size.
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
@@ -37,7 +37,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 2. On your internet browser, navigate to the Google Drive link above.
 
-3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
+3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM. Verify that there are five NumPy files labeled with .npy extension in the 'CA_ISRM' directory, and ensure that each file is approximately 5.65 GB in size.
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
 
@@ -47,7 +47,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 1. On your internet browser, navigate to the Google Drive link above.
 
-2. Download those files to your local machine. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM.
+2. Download those files to your local machine. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM. Verify that there are five NumPy files labeled with .npy extension in the 'CA_ISRM' directory, and ensure that each file is approximately 5.65 GB in size.
 
 3. On the Google Cloud Platform, navigate to the storage bucket that you are using for this project. 
 
@@ -159,6 +159,7 @@ pwd
 python3 run_echo_air.py --check-setup
       ```
    * If everything is configured correctly, you should get a message that says so.
+
 
 **screenshot**
 
