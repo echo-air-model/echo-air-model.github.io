@@ -165,5 +165,3 @@ python3 run_echo_air.py --check-setup
 
 
 
-
-
