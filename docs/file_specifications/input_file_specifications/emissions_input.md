@@ -10,7 +10,7 @@ nav_order: 2
 
 The emissions input file is the only required input for runs done in California using 2010 Census data. As such, this is the most important input file!
 
-Emissions input files can be shapefiles (created using ArcGIS, QGIS, or coding languages like Python or R), feather files (best created in Python), or CSV files if all sources are point sources (created in Microsoft Excel or similar).
+Emissions input files can be shapefiles (created using ArcGIS, QGIS, or coding languages like Python or R), feather files (best created in Python), or CSV files if all sources are point sources (created in Microsoft Excel or similar). Emission files with larger areas—areas exceeding 2500 km^2—are less likely to provide accurate data for disparity, equity, and environmental justice analyses, and would trigger a warning output, although processing will still continue. 
 
 Emissions can be in any of the following mass units and time units. 
 * Mass units: 
