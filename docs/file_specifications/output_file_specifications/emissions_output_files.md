@@ -10,7 +10,7 @@ nav_order: 2
 
 ### Allocated Emissions Shapefiles
 
-After each run, a file named "shapes" will be generated, containing shapefiles labeled as "test_layer#" with the following extensions: ".cpg", ".dbf", ".prj", ".shp", and ".shx".
+After each run, a file named "shapes" will be generated, containing shapefiles. The allocated emissions shapefiles are labeled as "test_layer[run]_allocated_emis" with the following extensions: ".cpg", ".dbf", ".prj", ".shp", and ".shx". 
 
 Each extension serves a specific purpose:
 
