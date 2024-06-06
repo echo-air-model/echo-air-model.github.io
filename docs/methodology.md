@@ -13,7 +13,7 @@ The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in re
 * Between 57 and 140 meters
 * Greater than 760 meters.
 
-If your run includes emissions occurring between 140 and 760 meters, please see the additional documentation [here](https://echo-air-model.github.io/docs/other_information/isrm_hole_patch.html).
+If your run includes emissions occurring between 140 and 760 meters, please see the additional documentation [here](https://echo-air-model.github.io/docs/other_information/isrm_hole_patch.html). Emission files with larger areas are less likely to provide accurate data for disparity, equity, and environmental justice analyse. A file with a max area exceeding 2500 km^2 would trigger a warning output, although processing will still continue. 
 
 The model is capable of reading in a different ISRM, if specified by the user. 
 

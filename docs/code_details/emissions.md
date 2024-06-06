@@ -55,7 +55,8 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `map_pollutant_names`: replaces pollutant names if they are not found in the emissions data based on near-misses (e.g., PM2.5 for PM25)
 * `filter_emissions`: filters the emissions based on the `filter_dict` input
 * `check_geo_types`: checks what geometries are present in the emissions shapefile (e.g., points, polygons, multipolygons); if points exist, uses `buffer_emis` to convert to polygons
-* `buffer_emis` converts points to polygons by adding a buffer of `dist` 
+* `check_polygon_area`: checks if the maximum polygon area exceeds 2500 km^2 and outputs a warning to the user if so
+* `buffer_emis` converts points to polygons by adding a buffer of `dist`
 * `clean_up`: simplifies the emissions data by removing unnecessary dimensions, converting units as appropriate, and updating the column names
 * `convert_units`: converts units from provided units to μg/s using the unit dictionaries built-in
 * `split_polutants`: converts the emissions layer into separate objects for each pollutant
