@@ -16,6 +16,8 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `output_dir`: a string pointing to the output directory
 * `output_emis_flag`: a Boolean indicating whether ISRM-allocated emissions should be output
 * `run_parallel`: a Boolean indicating whether or not to run in parallel
+* `shp_path`: data variable file path for the boarder
+* `output_region`: a geodataframe containing only the region of interest
 * `verbose`: a Boolean indicating whether the user wants to run in verbose mode
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
 
