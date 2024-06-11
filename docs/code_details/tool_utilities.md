@@ -97,11 +97,11 @@ Creates the output region geodataframe
 ### `calculate_true_north_angle`
 Calculates the angle between the positive y-axis and true north.
 1. Inputs:
-* `center_lon`: Longitude of the center point of the map.
-* `center_lat`: Latitude of the center point of the map.
-* `crs`: The coordinate reference system of the map.
+   * `center_lon`: Longitude of the center point of the map.
+   * `center_lat`: Latitude of the center point of the map.
+   * `crs`: The coordinate reference system of the map.
 2. Outputs:
-* `angle`: The angle in degrees.
+   * `angle`: The angle in degrees.
 3. Methodology:
   1. Creates a transformer to convert from WGS84 to the given CRS.
   2. Transforms the center point and a point slightly north.
@@ -110,13 +110,13 @@ Calculates the angle between the positive y-axis and true north.
 ### `add_north_arrow`
 Adds a simple north arrow to the plot with a specified rotation angle.
 1. Inputs:
-* `ax`: The axis to add the north arrow to.
-* `angle`: The angle to rotate the north arrow.
-* `x`: The x-coordinate of the arrow's tip (in axis coordinates).
-* `y`: The y-coordinate of the arrow's tip (in axis coordinates).
-* `arrow_length`: The length of the arrow.
+   * `ax`: The axis to add the north arrow to.
+   * `angle`: The angle to rotate the north arrow.
+   * `x`: The x-coordinate of the arrow's tip (in axis coordinates).
+   * `y`: The y-coordinate of the arrow's tip (in axis coordinates).
+   * `arrow_length`: The length of the arrow.
 2. Outputs:
-* None
+   * None
 3. Methodology:
   1. Ensures the angle is a float.
   2. Creates a rotation transformation.
