@@ -93,3 +93,21 @@ Creates the output region geodataframe
       1. Gets the filepath of the output region based on the `region_category` from the `output_geometry_fps` dictionary.
       2. Reads in the file as a geodataframe.
       3. Clips the geodataframe to the `region_of_interest`.
+
+### `intersect_geometries`
+Performs geometric intersection between input layer and target geography, calculates area fractions.
+1. Inputs:
+   * `input_layer`: GeoDataFrame containing the source geometries.
+   * `target_geography`: GeoDataFrame containing the target geometries for intersection.
+   * `area_column`: Name of the column to store area calculations.
+   * `verbose`: a Boolean indicating if it is in verbose mode or not
+   * `debug_mode`: a Boolean indicating whether or not to output debug statements
+2. Outputs:
+   * `intersect`: GeoDataFrame with intersections and area fractions.
+   * `input_copy`: Input GeoDataFrame containing the geometries to be intersected.
+3. Methodology:
+   1. Checks if the CRS of the input layer matches the target geography's CRS, and projects if necessary.
+   2. Adds an ID field to the input layer.
+   3. Calculates the total area of each input geometry cell.
+   4. Creates an intersect object between the input and target geometries.
+   5. Adds total area and area fraction to the intersect object.
