@@ -103,9 +103,9 @@ Calculates the angle between the positive y-axis and true north.
 2. Outputs:
    * `angle`: The angle in degrees.
 3. Methodology:
-  1. Creates a transformer to convert from WGS84 to the given CRS.
-  2. Transforms the center point and a point slightly north.
-  3. Calculates the angle between these points to determine the direction of true north.
+   1. Creates a transformer to convert from WGS84 to the given CRS.
+   2. Transforms the center point and a point slightly north.
+   3. Calculates the angle between these points to determine the direction of true north.
 
 ### `add_north_arrow`
 Adds a simple north arrow to the plot with a specified rotation angle.
@@ -118,7 +118,7 @@ Adds a simple north arrow to the plot with a specified rotation angle.
 2. Outputs:
    * None
 3. Methodology:
-  1. Ensures the angle is a float.
-  2. Creates a rotation transformation.
-  3. Defines coordinates for the arrow.
-  4. Adds the arrow and 'N' annotation to the plot.
+   1. Ensures the angle is a float.
+   2. Creates a rotation transformation.
+   3. Defines coordinates for the arrow.
+   4. Adds the arrow and 'N' annotation to the plot.
