@@ -17,6 +17,8 @@ The `concentration` object runs ISRM-based calculations for each of the vertical
 * `output_dir`: a string pointing to the output directory
 * `output_emis_flag`: a Boolean indicating whether ISRM-allocated emissions should be output
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
+* `shp_path`: data variable file path for the boarder
+* `output_region`: a geodataframe containing only the region of interest
 * `output_geometry_fps`: a dictionary containing a mapping between `region_category` and the filepaths
 * `output_resolution`: a geodataframe containing only the region of interest
 * `run_calcs`: a Boolean indicating whether the program should run, or if it should just check the inputs (useful for debugging)
