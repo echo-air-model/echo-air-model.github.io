@@ -20,6 +20,7 @@ The code is written in Python 3. The library requirements are included in this r
 * geopandas==0.10.2
 * kiwisolver==1.4.2
 * matplotlib==3.5.1
+* matplotlib-scalebar==0.8.1
 * munch==2.5.0
 * numpy==1.22.3
 * packaging==21.3
