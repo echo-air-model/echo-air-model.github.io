@@ -14,6 +14,11 @@ There is a template control file stored in the `templates` folder of the ECHO-AI
 
 The tables below describe all of the fields of the control file. The “Required” column indicates if the input is required for the tool to run. If it is not required, ECHO-AIR will assume a default value.
 
+## Downloading Census Data
+Census data can be downloaded from IPUMS NGHIS and processed through running the `create_population_files.py`. This outputs a useable population data file which can then be used to run the model.
+
+The necessary file paths needed after downloading are the codebook file path which ends in codebook.txt, the tract data file path which ends in tract.csv, and the tract shapefile which ends in tract.shp.
+
 ### Meta Data
 
 This section provides the model with a naming structure for output files.
