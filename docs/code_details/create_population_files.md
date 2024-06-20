@@ -13,7 +13,7 @@ In the initialization section of `create_population_files.py`, the parser object
 
 Currently, the only arguments accepted by the parser object are `-i` for input file, `-h` for help, and `--check-setup` to run a setup check. 
 
-Once the parser is defined, the population control file object is created using `population_control_file.py` class object. A number of metadata variables are defined from the control file. 
+Once the parser is defined, the population control file object is created using `pop_control_file.py` class object. A number of metadata variables are defined from the control file. 
 
 Next, a number of internally saved data file paths are saved. A census object is then created using `census.py`, where the census object is used to preprocess census data and output usable population data. 
 
