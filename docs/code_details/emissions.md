@@ -16,7 +16,8 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `units`: units associated with the emissions (e.g., μg/s)
 * `name`: a plain English name tied to the emissions data, either provided or automatically generated from the filepath
 * `details_to_keep`: any additional details to be preserved throughout the processing (e.g., sector, fuel type) (not fully built out yet)
-* `filter_dict`: filters the emissions inputs based on inputted dictionary (not fully built out yet)
+* `filter_dict`: filters the emissions inputs based on inputted dictionary
+* `emis_delta`: a dict with percentage cahnges of emissions requested
 * `load_file`: a Boolean indicating whether or not the file should be loaded (for debugging)
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
@@ -54,6 +55,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `check_emissions`: runs a number of checks on the emissions data to ensure data are valid before running anything
 * `map_pollutant_names`: replaces pollutant names if they are not found in the emissions data based on near-misses (e.g., PM2.5 for PM25)
 * `filter_emissions`: filters the emissions based on the `filter_dict` input
+* `change_percentages`: changes emissions by x% for the given pollutant
 * `check_geo_types`: checks what geometries are present in the emissions shapefile (e.g., points, polygons, multipolygons); if points exist, uses `buffer_emis` to convert to polygons
 * `check_polygon_area`: checks if the maximum polygon area exceeds 2500 km^2 and outputs a warning to the user if so
 * `buffer_emis` converts points to polygons by adding a buffer of `dist`
