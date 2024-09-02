@@ -16,7 +16,10 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `units`: units associated with the emissions (e.g., μg/s)
 * `name`: a plain English name tied to the emissions data, either provided or automatically generated from the filepath
 * `details_to_keep`: any additional details to be preserved throughout the processing (e.g., sector, fuel type) (not fully built out yet)
-* `filter_dict`: filters the emissions inputs based on inputted dictionary (not fully built out yet)
+* `filter_dict`: filters the emissions inputs based on inputted dictionary 
+* `emis_delta`: the dictionary containing emissions change
+* `emis_change_only`: a Boolean indicating whehter or not the emissions object is solely the emissions change
+* `boundary_change`: a shapefile containing the boundary for where emissions would be adjusted
 * `load_file`: a Boolean indicating whether or not the file should be loaded (for debugging)
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
@@ -61,6 +64,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `convert_units`: converts units from provided units to μg/s using the unit dictionaries built-in
 * `split_polutants`: converts the emissions layer into separate objects for each pollutant
 * `which_layers`: determines the `L0_flag`, `L1_flag`, `L2_flag`, and `linear_interp_flag` variables based on the HEIGHT column of the emissions data
+* `change_percentages`: changes emissions by x% for a given pollutant given the the EMISSIONS_CHANGE input
 
 ### External Functions
 * `visualize_emissions`: creates a simple map of emissions for a provided pollutant
