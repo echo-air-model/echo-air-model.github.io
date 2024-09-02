@@ -113,7 +113,7 @@ This section provides the model with a naming structure for output files.
   </tr>
 </table>
 
-### Emissions %
+### Edit Emissions
 
 <table cellspacing="0" cellpadding="0">
   <tr>
@@ -124,6 +124,9 @@ This section provides the model with a naming structure for output files.
   </tr>
   <tr>
     <td> BOUNDARY </td><td> No </td><td> If provided, will only apply emission changes to the boundary specified. For shapefiles, use the .shp file.</td><td>  /home/[your_name]/inputs/[input_folder]/[boundary].shp </td>
+  </tr>
+  <tr>
+    <td> FILTER_OPTIONS </td><td> No </td><td> If provided, will filter through emissions (eg: Vehicle Type: [CAR, TRUCK], Regulated:[Y] will provide only cars and trucks vehicle type that is regulated) </td><td> Filter Type: [Filter Selection] </td>
   </tr>
 </table>
 
