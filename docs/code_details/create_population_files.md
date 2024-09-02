@@ -1,6 +1,6 @@
 ---
 layout: default
-title: create_population_files.py
+title: Creating Population Files
 parent: Other Information
 nav_order: 2
 ---
