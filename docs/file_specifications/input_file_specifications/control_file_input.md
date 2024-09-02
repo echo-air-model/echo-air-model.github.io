@@ -113,6 +113,20 @@ This section provides the model with a naming structure for output files.
   </tr>
 </table>
 
+### Emissions %
+
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <th>Field</th><th>Required</th><th>Description</th><th>Test Data Input</th>
+  </tr>
+  <tr>
+    <td> EMISSIONS_CHANGE </td><td> No </td><td> If provided with positive or negative percentages for pollutants, the program will output two sets of data: one showing only the changes in emissions and another showing the current emissions with the changes applied. </td><td> PM25: +30, NH3: -20, VOC: 10, NOX: 0, SOX: 20 </td>
+  </tr>
+  <tr>
+    <td> BOUNDARY </td><td> No </td><td> If provided, will only apply emission changes to the boundary specified. For shapefiles, use the .shp file.</td><td>  /home/[your_name]/inputs/[input_folder]/[boundary].shp </td>
+  </tr>
+</table>
+
 ### Options for Output Regions
 The following keywords are pre-programmed for use in ECHO-AIR for evaluating specific regions in California. All of the key words should be input in all capitals. Jump ahead to [Air Basins](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html#air-basins), [Air Districts](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html#air-districts), and [Counties](https://echo-air-model.github.io/docs/file_specifications/input_file_specifications/control_file_input.html#counties).
 
