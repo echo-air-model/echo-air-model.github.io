@@ -3,7 +3,7 @@ layout: default
 title: Census
 parent: Supporting Code Objects
 grand_parent: Code Details
-nav_order: 3
+nav_order: 8
 ---
 
 ## `census.py`
