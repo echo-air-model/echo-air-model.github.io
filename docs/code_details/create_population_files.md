@@ -1,11 +1,11 @@
 ---
 layout: default
 title: create_population_files.py
-parent: Code Details
+parent: Other Information
 nav_order: 2
 ---
 
-## `create_population_files.py`
+## Creating Population Files
 The `create_population_files.py` script is the main script file used to create population data that can be used for the model. This script operates the command line functionality and outputs the desired population file. The `create_population_files.py` script is not split into functions or objects, instead, it runs through intializing and calling other supporting code files.
 
 ### Initialization and Run Program
