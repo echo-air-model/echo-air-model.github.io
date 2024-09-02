@@ -3,7 +3,7 @@ layout: default
 title: Population Control File
 parent: Input Files
 grand_parent: File Specifications
-nav_order: 6
+nav_order: 5
 ---
 
 ## Population Control File
