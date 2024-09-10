@@ -37,7 +37,7 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 ### Simple Functions
 * `allocate_emissions`: inputs the emissions layer and the ISRM geography, and re-allocates the emissions to the ISRM geography using an area-based allocation procedure
 * `cut_emissions`: inputs the pollutant geodataframe from the emissions object and slices it based on the minimum and maximum release heights (minimum inclusive, maximum exclusive) associated with the ISRM vertical layer
-* `process_emissions`: for each of the five primary pollutants, runs `cut_emissions` and then `allocate_emissions` to return the geodataframes of emissions of each primary pollutant released in the `layer` allocated to the ISRM grid
+* `process_emissions`: for each of the five primary pollutants, runs `intersect_geometries` and then `allocate_emissions` to return the geodataframes of emissions of each primary pollutant released in the `layer` allocated to the ISRM grid
 * `visualize_individual_emissions`: creates a 5-panel plot of total emissions for each individual pollutant and exports it as PNG file 
 * `save_allocated_emis`: outputs ISRM-allocated emissions to a shapefile
 * `get_concentration`: for a pollutant's emission layer (`POLe`), the ISRM matrix for that pollutant, and the `layer` ID, estimates the concentration at ground-level for the primary pollutant (`pPOL`)

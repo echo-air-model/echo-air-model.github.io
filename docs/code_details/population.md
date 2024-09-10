@@ -34,4 +34,4 @@ The `population` object stores detailed Census tract-level population data for t
 
 ### External Functions
 * `project_pop`: projects the population data to a new coordinate reference system
-* `allocate_population`: reallocates population into new geometry using a spatial intersect
+* `allocate_population`: reallocates population into new geometry using a spatial intersect calculated by `intersect_geometries`
