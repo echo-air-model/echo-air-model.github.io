@@ -10,9 +10,7 @@ A repository of scripts used for converting emissions to concentrations and heal
 
 *Libby H. Koolik, Álvaro Alvarado, Amy Budahn, Laurel Plummer, Julian D. Marshall, and Joshua S. Apte*
 
-Last modified January 23, 2024
-
-<b>Note: this website is currently under construction and is being actively updated.</b>
+Last modified September 10, 2024
 
 ----
 
@@ -26,7 +24,9 @@ The ultimate goal of this repository is to create a pipeline for estimating disp
 
 This website serves as the living documentation for the ECHO-AIR model. The navigation pane on the left will help you navigate through Getting Started, Running the Code, Technical Code Details, and any other additional supporting information.
 
-Currently, the model is configured and validated for California ISRM calculations. In the near future, I will validate it on the national ISRM as well. 
+Currently, the model is configured and validated for California ISRM calculations, as demonstrated in Koolik et al. 2024.[^5] 
+
+Development on the ECHO-AIR model is ongoing, and as such this website serves as a living document. We do our best to update the documentation as the code is updated, but we apologize in advance for any discrepancies. Please reach out if you have any questions or comments about our documentation.
 
 ----
 ## Intended Uses
@@ -44,6 +44,7 @@ ECHO-AIR is well suited for projects investigating environmental justice issues,
 [^2]: [Tessum CW, et al., (2021) PM<sub>2.5</sub> polluters disproportionately and systemically affect people of color in the United States. Sci. Adv. 7.](https://doi.org/10.1126/sciadv.abf4491)
 [^3]: [Goodkind AL, et al., (2019) Fine-scale damage estimates of particulate matter pollution reveal opportunities for location-specific mitigation of emissions. PNAS 116 (18).](https://doi.org/10.1073/pnas.1816102116)
 [^4]: [Tessum CW, et al., (2019) Inequity in consumption of goods and services adds to racial-ethnic disparities in air pollution exposure. PNAS 116 (13).](https://doi.org/10.1073/pnas.1818859116)
+[^5]: [Koolik LH, et al., (2024) PM2.5 exposure disparities persist despite strict vehicle emissions controls in California. Sci. Adv. 10](https://doi.org/10.1126/sciadv.adn8544)
 
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
 [GitHub Pages]: https://docs.github.com/en/pages

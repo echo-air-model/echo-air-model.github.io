@@ -19,5 +19,7 @@ In alphabetical order, the following people are acknowledged for their support a
 
 Additionally, we thank the California Office of Environmental Health Hazard Assessment (OEHHA) for funding this work.
 
+If you have any questions related to ECHO-AIR, please contact echo.air.model@gmail.com.
+
 ----
 Additionally, we would like to thank the team responsible for developing and maintaining the Just the Docs template used for this documentation. You can get started with your own easy to make website by downloading their template [here](https://github.com/just-the-docs/just-the-docs).
