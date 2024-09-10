@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Control File
-parent: Input Files
+parent: Output Files
 grand_parent: File Specifications
 nav_order: 5
 ---
