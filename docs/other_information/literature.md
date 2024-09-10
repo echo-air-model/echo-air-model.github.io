@@ -11,8 +11,7 @@ Check out some recent publications, preprints, and conference proceedings that u
 
 ### Literature
 <ul>
-  <li> Koolik, L. H., Alvarado, Á., Budahn, A., Plummer, L., Marshall, J. D., and Apte, J. S.: PM<sub>2.5</sub> exposure disparities persist despite strict vehicle emissions controls in California
-. <i>Science Advances</i> <b>10</b>. 2024. (<a href="https://doi.org/10.1126/sciadv.eadn8544">link</a>)</li>
+  <li> Koolik, L. H., Alvarado, Á., Budahn, A., Plummer, L., Marshall, J. D., and Apte, J. S.: PM<sub>2.5</sub> exposure disparities persist despite strict vehicle emissions controls in California. <i>Science Advances</i> <b>10</b>. 2024. (<a href="https://doi.org/10.1126/sciadv.eadn8544">link</a>)</li>
 </ul>
 
 ### Conferences
