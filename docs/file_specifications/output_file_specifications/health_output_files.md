@@ -3,7 +3,7 @@ layout: default
 title: Control File
 parent: Output Files
 grand_parent: File Specifications
-nav_order: 5
+nav_order: 6
 ---
 
 ## Health Output Files 
