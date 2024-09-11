@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Administrative Output Files
-parent: Output File
+parent: Output Files
 grand_parent: File Specifications
 nav_order: 1
 --- 
