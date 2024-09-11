@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Control File
+title: Emissions Output Files
 parent: Output Files
 grand_parent: File Specifications
 nav_order: 2
 ---
 
-## Emissions output Files
+## Emissions Output Files
+If enabled with the `OUTPUT_EMIS` option in the control file, the tool will output a shapefile of emissions allocated to the ISRM grid. Details about this output are below.
 
 ### Allocated Emissions Shapefiles
-
 After each run, a file named "shapes" will be generated, containing shapefiles. The allocated emissions shapefiles are labeled as "test_layer[run]_allocated_emis" with the following extensions: ".cpg", ".dbf", ".prj", ".shp", and ".shx". 
 
 Each extension serves a specific purpose:
