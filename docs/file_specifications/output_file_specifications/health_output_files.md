@@ -12,7 +12,7 @@ When the model is run with RUN_HEALTH, the output files will be generated for th
 ### Individual Health Endpoint Mortality Maps
 With each run, there will be three map figures (one per endpoint) in the format [batch]_[run]total[endpoint]_excess_mortality.png. Each map figure contains four maps: total population density, total exposure, total endpoint excess mortality, and total endpoint mortality per 100K people. An example is shown below.
 
-![Individual Health Endpoint Mortality png](https://github.com/echo-air-model/echo-air-model.github.io/blob/output_file_pages/assets/getting_started/mac_os/demo_test_03_total_ischemic%20heart%20disease_excess_mortality.png?raw=true)
+![Individual Health Endpoint Mortality png](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/demo_test_03_total_ischemic%20heart%20disease_excess_mortality.png)
 
 ### Individual Health Endpoint Data
 Each run also generates a CSV spreadsheet file with the format [batch]_[run]total[endpoint]_excess_mortality.csv for each of the three endpoints. The CSV file has the following columns: ISRM_ID, CONC_UG/M3 (concentration levles), Asian (# People), Black (# People),	Hispanic/Latino (# People), Native American (# People), White (# People), Total (# People), Other (# People), [endpoint]_ASIAN, [endpoint]_BLACK,	[endpoint]_HISLA,	[endpoint]_INDIG,	[endpoint]_TOTAL,	[endpoint]_WHITE,	and [endpoint]_OTHER. 
