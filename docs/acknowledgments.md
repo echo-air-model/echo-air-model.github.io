@@ -17,7 +17,7 @@ In alphabetical order, the following people are acknowledged for their support a
 * Justin Ward (Google): supported parallelization of main program
 * Amy Yao (UC Berkeley): undergraduate research assistant, code developer
 
-Additionally, we thank the California Office of Environmental Health Hazard Assessment (OEHHA) for funding this work.
+Additionally, we thank the California Office of Environmental Health Hazard Assessment (OEHHA) and Google.org for funding this work.
 
 If you have any questions related to ECHO-AIR, please contact echo.air.model@gmail.com.
 
