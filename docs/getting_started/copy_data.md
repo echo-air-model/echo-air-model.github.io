@@ -7,7 +7,7 @@ nav_order: 5
 
 ## 4. Copy Data
 
-Now we will copy over the necessary data for running the pipeline. The required data files are located on [Google Drive](https://drive.google.com/drive/folders/1UOONQ0aQ6y0vasRL47lDaJNZ9IJv-w5A?usp=sharing). Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
+Now we will copy over the necessary data for running the pipeline. The required data files are located on [Google Drive](https://drive.google.com/drive/folders/14j-yB43YgZgPSPvhjxjdEbhLe6tR0SEc?usp=drive_link). Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
 
 The recommended method for copying the data files varies by operating system. Follow the link below to view your specific instructions.
 
@@ -79,7 +79,7 @@ gsutil cp -r gs://[bucket_name]/data .
 
 ----
 
-### Direct to Terminal
+### Direct to Terminal  (Note: these links are currently broken)
 
 The following code will copy the data directly from Google Drive to the ECHO-AIR model directory.
 
