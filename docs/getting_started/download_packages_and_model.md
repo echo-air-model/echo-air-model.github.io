@@ -38,6 +38,8 @@ ls
 
 If this worked successfully, you should see the following. Note that the green text should say `[your_name]@[machine_name]`
 
-![**Screenshot**](https://echo-air-model.github.io/assets/getting_started/mac_os/bin_activate_screenshot.png)
+![**Screenshot**](https://echo-air-model.github.io/assets/getting_started/mac_os/github_clone_success_scripts.png)
+
+
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/create_virtual_environment.html)
