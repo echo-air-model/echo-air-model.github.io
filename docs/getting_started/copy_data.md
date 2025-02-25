@@ -7,7 +7,7 @@ nav_order: 5
 
 ## 4. Copy Data
 
-Now we will copy over the necessary data for running the pipeline. The required data files are located on [Google Drive](https://drive.google.com/drive/folders/14j-yB43YgZgPSPvhjxjdEbhLe6tR0SEc?usp=drive_link). Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
+Now we will copy over the necessary data for running the pipeline. The required data files are located on [Google Drive](https://drive.google.com/drive/folders/14j-yB43YgZgPSPvhjxjdEbhLe6tR0SEc?usp=share_link). Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
 
 The recommended method for copying the data files varies by operating system. Follow the link below to view your specific instructions.
 
@@ -79,7 +79,7 @@ gsutil cp -r gs://[bucket_name]/data .
 
 ----
 
-### Direct to Terminal  (Note: these links are currently broken)
+### Direct to Terminal
 
 The following code will copy the data directly from Google Drive to the ECHO-AIR model directory.
 
@@ -96,22 +96,22 @@ sudo apt-get install wget
 
 3. Copy the following commands and run them in your terminal.
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1DqUqxafrIG8GAkWhELOQ5fyQzU9FW5_G' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1DqUqxafrIG8GAkWhELOQ5fyQzU9FW5_G" -O air_basins.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1h_OWu9RqVLemOfx0RDpVnkfjNFiWrcf2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1h_OWu9RqVLemOfx0RDpVnkfjNFiWrcf2" -O air_basins.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=14pfebDkTwvjchByUEleBEIln0GWU8D3h' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=14pfebDkTwvjchByUEleBEIln0GWU8D3h" -O air_districts.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=10cvQhV3nirdz1A1KXnBYPDCtPAMr8QbZ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=10cvQhV3nirdz1A1KXnBYPDCtPAMr8QbZ" -O air_districts.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1OEW230YjqlP4RTmEy7PojWdAssPe2mWZ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1OEW230YjqlP4RTmEy7PojWdAssPe2mWZ" -O benmap_incidence.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1DvFp3vLiAMto8xng_5ku4VuNgAtbFcEr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1DvFp3vLiAMto8xng_5ku4VuNgAtbFcEr" -O benmap_incidence.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1wi010o5Wr98W0M4IQrhChJjEEvpnwmR2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1wi010o5Wr98W0M4IQrhChJjEEvpnwmR2" -O ca_border.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1GAKWWPhCj8_pFp5EofwGpL3aYuWThlWa' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1GAKWWPhCj8_pFp5EofwGpL3aYuWThlWa" -O ca_border.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1m-C6EnQ_esdATLwU_vTMll5s5Wv5RJ6M' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1m-C6EnQ_esdATLwU_vTMll5s5Wv5RJ6M" -O ca2010.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1EinqyQgvIxKGZdJeNktkv-2AilycIscH' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1EinqyQgvIxKGZdJeNktkv-2AilycIscH" -O ca2010.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1NJsByx_YgMZtl2BdwJW6ULsjtE2Tnlco' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1NJsByx_YgMZtl2BdwJW6ULsjtE2Tnlco" -O counties.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1nBgU1BIVdVhFhlzoMJNpCCLOpLfFXMr9' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1nBgU1BIVdVhFhlzoMJNpCCLOpLfFXMr9" -O counties.feather && rm -rf /tmp/cookies.txt
       ```
 
 4. Create a sub-directory called "CA_ISRM" and navigate to it.
@@ -122,13 +122,13 @@ cd CA_ISRM
 
 5. Copy the following commands to copy the data directly from Google Drive. Note: these may take a few minutes each, as these are very large files.
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1fzYgvojGrkWpeDg09smNzCGuV8-P0xzz' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1fzYgvojGrkWpeDg09smNzCGuV8-P0xzz" -O isrm_geo.feather && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1O2okLpnFWot6sAK92g11xDAMCMRGvPHF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1O2okLpnFWot6sAK92g11xDAMCMRGvPHF" -O isrm_geo.feather && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1I4CC88ykpE_WzdjUEry35pqsBE6Aaaex' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1I4CC88ykpE_WzdjUEry35pqsBE6Aaaex" -O ISRM_NH3.npy && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1LtsAbvUm6uXpfcqehFbK-65FvCnTR0wl" -O ISRM_NH3.npy && rm -rf /tmp/cookies.txt
       ```
    ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1mneFJEfsGKLIz4xzGEcVVLFW_C7y7ynd' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1mneFJEfsGKLIz4xzGEcVVLFW_C7y7ynd" -O ISRM_NOX.npy && rm -rf /tmp/cookies.txt
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1y__OvvXnzYQHjcQWgwX3a6_-8gvbjUPr' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1y__OvvXnzYQHjcQWgwX3a6_-8gvbjUPr" -O ISRM_NOX.npy && rm -rf /tmp/cookies.txt
       ```
    ```bash
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1O6GPVjLuTnJUmdWM2lt3p4w9UCoRBiB3' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1O6GPVjLuTnJUmdWM2lt3p4w9UCoRBiB3" -O ISRM_PM25.npy && rm -rf /tmp/cookies.txt
