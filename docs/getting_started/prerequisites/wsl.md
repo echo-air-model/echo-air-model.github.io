@@ -23,7 +23,9 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
 	 ```
 
       {:style="counter-reset:step-counter 2"}
-         3. The setup is correct if you get the following output: **screenshot**
+         3. The setup is correct if you get the following output:
+  ![Windows command prompt](https://github.com/echo-air-model/echo-air-model.github.io/blob/36-update-the-wsl-instructions-for-getting-started-and-troubleshooting/assets/getting_started/wsl/wsl_verbose_screenshot.png)
+
 
    {:style="counter-reset:step-counter 1"}
       2. If you are using WSL version 1, you can upgrade it using the following instructions:
