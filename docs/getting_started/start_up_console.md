@@ -15,9 +15,9 @@ The following instructions start up the Terminal and navigate to a working direc
 
 1. Open a Terminal window by searching for it in the Finder.
 2. Navigate to your working directory by typing:
-   ```bash
+```bash
 cd [your/file/path]  
-      ```
+```
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/download_packages_and_model.html)
 
@@ -28,23 +28,29 @@ The following instructions start up the Ubuntu console and navigate to a working
 
 1. Launch Ubuntu and log in, if needed.
 
-2. Ubuntu will use your native Windows file system, but it may be blocked at first. Run the following commands in your home directory:
-   ```bash
+2. Ubuntu will use your native Windows file system, but it may be blocked at first. First try:
+```bash
+cd ../../mnt/c/users/[your_name]/[your/file/path] 
+```
+If this works, skip to step 5.
+
+3. If the native Windows file system is blocked, run the following commands in your home directory:
+```bash
 sudo umount /mnt/c 
 sudo mount -t drives C: /mnt/c -o metadata
-      ``` 
+ ``` 
 
-3. Navigate to your C-drive and to the file path you have created as your working directory:
-   ```bash
+4. Navigate to your C-drive and to the file path you have created as your working directory:
+```bash
 cd ../../mnt/c/users/[your_name]/[your/file/path] 
-      ``` 
+``` 
 
-4. Update the privileges of the working directory.
-   ```bash
+5. Update the privileges of the working directory.
+```bash
 cd ..
 chmod 777 [working-directory]
 cd [working-directory]
-      ``` 
+``` 
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/download_packages_and_model.html)
 

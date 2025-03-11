@@ -12,7 +12,7 @@ The model was validated on a Windows 10 Enterprise machine. The instructions bel
 ### Install Windows Subsystem for Linux
 In order to run ECHO-AIR on a Windows machine, you must have a distribution for Windows Subsystem for Linux (WSL) installed. The model was validated on Ubuntu version 2204.2.29.0, so this is the recommended version.
 
-1. Using the Microsoft Store, download Ubuntu version 2204.2.29.0.
+1. Using the Microsoft Store, download Ubuntu version 2204.2.29.0. The code has been tested on version 2204.2.29.0 as well as version 22.04.5.
 2. Set up your Ubuntu password and account.
 3. Ensure that you are using WSL version 2.
    1. You can check your version of WSL as follows:
@@ -23,7 +23,9 @@ In order to run ECHO-AIR on a Windows machine, you must have a distribution for 
 	 ```
 
       {:style="counter-reset:step-counter 2"}
-         3. The setup is correct if you get the following output: **screenshot**
+         3. The setup is correct if you get the following output:
+  ![Windows command prompt](https://github.com/echo-air-model/echo-air-model.github.io/blob/36-update-the-wsl-instructions-for-getting-started-and-troubleshooting/assets/getting_started/wsl/wsl_verbose_screenshot.png)
+
 
    {:style="counter-reset:step-counter 1"}
       2. If you are using WSL version 1, you can upgrade it using the following instructions:
