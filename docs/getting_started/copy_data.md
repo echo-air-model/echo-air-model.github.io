@@ -160,6 +160,7 @@ python3 run_echo_air.py --check-setup
       ```
    * If everything is configured correctly, you should get a message that says so.
 
+[-- Next Step -->](https://echo-air-model.github.io/docs/running_model/running_model.html)
 
 ![Message that shows when configured correctly](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/copy_data_test_setup.png?raw=true)
 
