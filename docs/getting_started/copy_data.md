@@ -27,7 +27,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM. Verify that there are five NumPy files labeled with .npy extension in the 'CA_ISRM' directory, and ensure that each file is approximately 5.65 GB in size.
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/test_setup.md)
 
 ----
 
@@ -39,7 +39,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 3. Download those files and save them to the "data" folder that you created. Note that you should preserve the structured sub-directory "CA_ISRM" if you intend to use the California ISRM. Verify that there are five NumPy files labeled with .npy extension in the 'CA_ISRM' directory, and ensure that each file is approximately 5.65 GB in size.
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/test_setup.md)
 
 ----
 
@@ -67,7 +67,7 @@ The recommended method for copying the data files varies by operating system. Fo
    gsutil cp -r gs://[bucket_name]/data .
    ```
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/test_setup.md)
 
 ----
 
@@ -75,7 +75,7 @@ The recommended method for copying the data files varies by operating system. Fo
 
 ...
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/test_setup.md)
 
 ----
 
@@ -151,27 +151,5 @@ The following code will copy the data directly from Google Drive to the ECHO-AIR
    wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1_owK9FszVIgQ2QICfLRCjIraJCf_hmb2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1_owK9FszVIgQ2QICfLRCjIraJCf_hmb2" -O ISRM_VOC.npy && rm -rf /tmp/cookies.txt
    ```
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html#test-setup)
-
-----
-
-### Test Setup
-
-Once the data are all imported, navigate back to the main directory and run the `--check-setup` function.
-
-1. Ensure your working directory is open in your terminal.
-   ```bash
-   pwd
-   ```
-   
-   * This should return `[your/file/path]/working-directory/echo_air`. If it does not, use `cd` to navigate up and down to get there.
-
-2. Run the following code:
-   ```bash
-   python3 run_echo_air.py --check-setup
-   ```
-   * If everything is configured correctly, you should get a message that says so.
-
-![Message that shows when configured correctly](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/copy_data_test_setup.png?raw=true)
-
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/test_setup.md)
 [-- Next Step -->](https://echo-air-model.github.io/docs/running_model/running_model.html)
