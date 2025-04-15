@@ -152,4 +152,3 @@ The following code will copy the data directly from Google Drive to the ECHO-AIR
    ```
 
 [-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/test_setup.md)
-[-- Next Step -->](https://echo-air-model.github.io/docs/running_model/running_model.html)
