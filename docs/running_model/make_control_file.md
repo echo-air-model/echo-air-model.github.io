@@ -11,6 +11,9 @@ The control file is the backbone of the entire model run. For more information a
 
 If you are running on Mac or WSL, you can make and edit the control file in your [file explorer and text editor](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-1-file-explorer-and-text-editor). If you are using a Linux terminal or Google Cloud, you must do it through the [command line](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-2-command-line). If you are running multiple runs, you may also consider using the [create_control_files script](https://echo-air-model.github.io/docs/running_model/make_control_file.html#option-3-create-control-files-script).
 
+A sample control file might look like this:
+![Screenshot of the control file](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/github_control_file_template.png)
+
 ### Option 1: File Explorer and Text Editor
 
 1. Using your file explorer, navigate to the `templates` folder of the ECHO-AIR model.
