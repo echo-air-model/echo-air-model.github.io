@@ -23,3 +23,5 @@ To run ECHO-AIR, you will need to create a Project within the Cloud Platform.
    1. It is recommended that you set up a machine type of e2-standard-16 or higher.
    2. The Boot disk should have a minimum of 64 GB.
 5. Navigate to the Cloud Storage Bucket page and create a Cloud Storage Bucket following the instructions [here](https://cloud.google.com/storage/docs/creating-buckets).
+
+[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/start_up_console.html)
