@@ -31,7 +31,8 @@ The `population` object stores detailed Census tract-level population data for t
 * `load_feather`: loads the population feather data using geopandas and post-processes
 * `make_pop_exp`: makes the exposure population data frame by summing across age bins
 * `make_pop_hia`: makes the health impact assessment population data frame by retaining key information
+* `crosswalk`:  creates a crosswalk of the population cells and ISRM grid cells
 
 ### External Functions
 * `project_pop`: projects the population data to a new coordinate reference system
-* `allocate_population`: reallocates population into new geometry using a spatial intersect calculated by `intersect_geometries`
+* `allocate_pop`: reallocates population into new geometry using a spatial intersect calculated by `crosswalk`
