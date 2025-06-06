@@ -9,11 +9,12 @@ The ECHO-AIR model works by a series of two modules. First, the model estimates 
 
 ### Concentration Module Methodology ###
 The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer for each of the five precursor species: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC). By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,705 sources by 21,705 receptors. The three elevations of release height within the ISRM are:
-* Less than 57 meters
-* Between 57 and 140 meters
-* Greater than 760 meters.
 
-If your run includes emissions occurring between 140 and 760 meters, please see the additional documentation [here](https://echo-air-model.github.io/docs/other_information/isrm_hole_patch.html). Emission files with larger areas are less likely to provide accurate data for disparity, equity, and environmental justice analyse. A file with a max area exceeding 2500 km^2 would trigger a warning output, although processing will still continue. 
+* Less than 51.8 meters
+* Between 51.8 and 95 meters
+* Greater than 95 meters.
+
+Emission files with larger areas are less likely to provide accurate data for disparity, equity, and environmental justice analyse. A file with a max area exceeding 2500 km^2 would trigger a warning output, although processing will still continue. 
 
 The model is capable of reading in a different ISRM, if specified by the user. 
 
