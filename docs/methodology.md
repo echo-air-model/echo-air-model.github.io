@@ -14,7 +14,7 @@ The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in re
 * Between 51.8 and 95 meters
 * Greater than 95 meters.
 
-Emission files with larger areas are less likely to provide accurate data for disparity, equity, and environmental justice analyse. A file with a max area exceeding 2500 km^2 would trigger a warning output, although processing will still continue. 
+Emission files with larger areas are less likely to provide accurate data for disparity, equity, and environmental justice analyse. A file with a max area exceeding 2500 km<sup>2</sup> would trigger a warning output, although processing will still continue. 
 
 The model is capable of reading in a different ISRM, if specified by the user. 
 
