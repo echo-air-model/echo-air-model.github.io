@@ -42,5 +42,5 @@ The `isrm` object loads, stores, and manipulates the ISRM grid data.
 * `clip_isrm`: clips the ISRM receptor geodata to only the relevant ones based on the `output_region` (i.e., returns the `receptor_IDs` and `receptor_geometry` objects)
 
 ### External Functions
-* `get_pollutant_layer`: Return a nested dictionary of ISRM layers and pollutant matrices
+* `get_pollutant_layer`: returns a nested dictionary of ISRM layers and pollutant matrices
 * `map_isrm`: simple function for mapping the ISRM grid cells
