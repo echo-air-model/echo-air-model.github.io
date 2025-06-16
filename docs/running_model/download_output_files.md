@@ -20,27 +20,27 @@ ECHO-AIR saves output files in a folder inside the model directory called `outpu
 ### Option 2: Google Cloud Console 
 
 1. When the model is done running, navigate to the `outputs` folder and check to confirm that a directory has been generated for your outputs. 
-   ```bash
+```bash
 cd outputs
 ls -l
-      ```
+```
 
 2. Enter that directory (`output_directory_name`) and confirm that output files have been properly generated.
-   ```bash
+```bash
 cd [output_directory_name]
 ls -l
-      ```
+```
 
 3. Once you confirm all of your outputs are stored, copy your files over to the bucket to download them to your computer. You should first move back up to your main `outputs` folder. It is recommended to have a folder on the bucket for your output files (e.g., “outputs” as shown below).
-   ```bash
+```bash
 cd ..
 gsutil cp -r [output_directory_name] gs://[bucket]/outputs
-      ```
+```
    * Note: the first time that you do this on a VM, you may encounter an `AccessDenied` error. To fix this error, follow these steps:
       1. Initiate the Google Cloud authorization for VMs
-         ```bash
-gcloud auth login
-            ```
+      ```bash
+      gcloud auth login
+      ```
 
       2. You will be prompted to continue. Type `Y` to continue.
       3. Copy the link provided into the web browser that you are using. You will then be prompted to log in with your Google account. Follow instructions to copy the authorization code.
