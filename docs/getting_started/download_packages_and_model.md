@@ -38,7 +38,7 @@ ls
 
 If this worked successfully, you should see the following. Note that the green text should say `[your_name]@[machine_name]`
 
-![**Screenshot**](https://echo-air-model.github.io/assets/getting_started/mac_os/github_clone_success_scripts.png)
+![**Screenshot**](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/github_clone_success_scripts.png)
 
 
 
