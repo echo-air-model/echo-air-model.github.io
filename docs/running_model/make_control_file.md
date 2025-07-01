@@ -33,17 +33,17 @@ A sample control file might look like this:
 ### Option 2: Command Line
 
 1. Create a copy of the control file from the templates folder. Rename the control file using the second line, if desired.
-   ```bash
-   cp /home/[your_name]/[your/file/path]/echo-air/templates/control_file_template.txt .
-   mv control_file_template.txt [new_name].txt
-   ```
+```bash
+cp /home/[your_name]/[your/file/path]/echo-air/templates/control_file_template.txt .
+mv control_file_template.txt [new_name].txt
+```
 
 2. Edit the control file. If you are struggling to edit the file using the command line, you can download a copy of the control file from the Github repository online, make edits, and upload using the same process as you have previously uploaded files.
 
    1. Open the control file.
-      ```bash
-      vi [control_file_name].txt 
-      ```
+```bash
+vi [control_file_name].txt 
+   ```
 
    2. Switch to insert mode by hitting `i`.
 
