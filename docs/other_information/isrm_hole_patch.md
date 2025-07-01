@@ -4,6 +4,7 @@ title: Source Releases in the "Hole"
 parent: Other Information
 nav_exclude: true
 ---
+### Note: this document is now obsolete, following the introduction of the new California ISRM.
 
 ## Patching the "Hole" in the California ISRM
 The following page details the short-term solution to the current missing release height layer in the California ISRM. The future California ISRM that is in development will be trained on each release height and this patch will be removed.

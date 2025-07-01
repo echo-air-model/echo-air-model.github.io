@@ -2,6 +2,7 @@
 layout: default
 title: 3. Create Virtual Environment
 parent: Getting Started
+grand_parent: Prerequisites
 nav_order: 4
 ---
 
@@ -11,48 +12,48 @@ The following steps create a virtual Python environment to ensure the model is r
 
 1. Create a virtual Python environment.
 
-```bash
-python3 -m venv .
-   ```
+    ```bash
+    python3 -m venv .
+    ```
 
-{:style="counter-reset:step-counter 1"}
 2. Activate the virtual environment.
 
-```bash
-source bin/activate 
-   ```
+    ```bash
+    source bin/activate
+    ```
 
-   * If this worked successfully, you should see the directory name in parentheses before your terminal input.
+    * If this worked successfully, you should see the directory name in parentheses before your terminal input.
 
-![Screenshot of the directory after we activate virtual environment](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/bin_activate_screenshot.png?raw=true)
+    ![Activate venv screenshot](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/bin_activate_screenshot.png?raw=true)
 
-{:style="counter-reset:step-counter 2"}
-   3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the Github was cloned.
-   ```bash
-python3 -m pip install -r requirements.txt
-      ```
+3. Add Python libraries to the new virtual environment using the requirements file that was downloaded when the GitHub repo was cloned.
 
-      * You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
-      * <b>Note:</b> your requirements may differ on a supercomputing cluster such as UC Berkeley's savio cluster. A copy of the requirements.txt file that works on UC Berkeley's Savio is copied [below](https://echo-air-model.github.io/docs/getting_started/create_virtual_environment.html#requirements-for-savio).
+    ```bash
+    python3 -m pip install -r requirements.txt
+    ```
 
-{:style="counter-reset:step-counter 3"}
-   4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
-   ```bash
-python3 run_echo_air.py -h
-      ```
+    * You may be prompted to say `Y` or `N`. Respond `Y` to all prompts.
+    * **Note:** your requirements may differ on a supercomputing cluster such as UC Berkeley's Savio cluster. A copy of the `requirements.txt` file that works on Savio is linked below.
 
-      * An example of the help message is below.
+4. To confirm that the libraries are installed properly, run the following code. If you get a help message, the installation has worked properly.
 
-![Screenshot of help message](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/virtual_environment_help_message.png?raw=true)
+    ```bash
+    python3 run_echo_air.py -h
+    ```
 
-[-- Next Step -->](https://echo-air-model.github.io/docs/getting_started/copy_data.html)
+    * An example of the help message is shown here:
+
+    ![Help message screenshot](https://github.com/echo-air-model/echo-air-model.github.io/blob/main/assets/getting_started/mac_os/virtual_environment_help_message.png?raw=true)
+
+[→ Next Step: Copy Data](https://echo-air-model.github.io/docs/getting_started/copy_data.html)
 
 ---
 
 ### Requirements for Savio
-If you are using UC Berkeley's Savio supercomputer, the following text should be copied over your requirements.txt file prior to step 3 above.
 
-```bash
+If you are using UC Berkeley's Savio supercomputer, copy the following into your `requirements.txt` *before* step 3 above:
+
+```text
 attrs==22.2.0
 certifi==2021.10.8
 click==8.0.3
@@ -82,7 +83,3 @@ scipy==1.5.4
 seaborn==0.11.2
 Shapely==1.8.1.post1
 six==1.16.0
-typing_extensions==4.1.1
-zipp==3.6.0
-zope.interface==5.4.0
-   ```
