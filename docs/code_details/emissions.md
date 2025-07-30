@@ -37,7 +37,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `VOC`: VOC compound emissions in each grid cell
 * `NOX`: NOx emissions in each grid cell
 * `SOX`: SOx emissions in each grid cell
-* `L0_flag`, `L1_flag`, `L2_flag`, `isrm_hole_flag`: Booleans indicating whether each layer should be calculated based on emissions release heights
+* `LA_flag`, `LB_flag`, `LC_flag`: Booleans indicating whether each layer should be calculated based on emissions release heights
 
 ### Internal Functions
 * `get_file_path`: returns the file path
@@ -60,7 +60,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `clean_up`: simplifies the emissions data by removing unnecessary dimensions, converting units as appropriate, and updating the column names
 * `convert_units`: converts units from provided units to μg/s using the unit dictionaries built-in
 * `split_polutants`: converts the emissions layer into separate objects for each pollutant
-* `which_layers`: determines the `L0_flag`, `L1_flag`, `L2_flag`, and `linear_interp_flag` variables based on the HEIGHT column of the emissions data
+* `which_layers`: determines the `LA_flag`, `LB_flag`, and `LC_flag` variables based on the HEIGHT column of the emissions data
 
 ### External Functions
 * `visualize_emissions`: creates a simple map of emissions for a provided pollutant
