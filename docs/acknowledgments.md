@@ -10,14 +10,17 @@ In alphabetical order, the following people are acknowledged for their support a
 * Dr. Joshua Apte (UC Berkeley): project PI
 * Cassidy Barrientos (UC Berkeley): PhD student, new California ISRM development
 * Amy Budahn (OEHHA, now CARB): advisor to development
+* Sammi Chung (OEHHA): advisor to development
 * Libby Koolik (UC Berkeley): PhD candidate, ECHO-AIR technical lead, 
 * Thomas Le (UC Berkeley): undergraduate research assistant, investigated pipelines for regulatory data
 * Dr. Julian Marshall (UW): advisor to development
+* Dr. Hye-Youn Park (OEHHA): advisor to development
 * Dr. Laurel Plummer (OEHHA): advisor to development
 * Meghana Raj (UC Berkeley): undergraduate research assistant, code developer, documentation support
 * Lucas Rojas Mendoza (UC Berkeley): PhD student, new California ISRM development
 * Clara Rong (UC Berkeley): undergraduate research assistant, documentation support
 * Benjamin Salop (UC Berkeley): undergraduate research assistant, code developer, documentation support
+* Rose Schmitz (OEHHA): advisor to development
 * Dr. Yuzhou Wang (UC Berkeley, now Texas A&M): postdoctoral researcher, new California InMAP development
 * Justin Ward (Google): supported parallelization of main program
 * Amy Yao (UC Berkeley): undergraduate research assistant, code developer, documentation support
