@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-<img src="/assets/echo-air_logo-01.png" alt="drawing" width="200"/>
+<img src="/assets/echo-air-logo-01.png" alt="drawing" width="200"/>
 
 A repository of scripts used for converting emissions to concentrations and health impacts using the InMAP Source Receptor Matrix (ISRM). 
 
