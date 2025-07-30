@@ -8,14 +8,19 @@ nav_order: 8
 In alphabetical order, the following people are acknowledged for their support and contributions:
 * Dr. Álvaro Alvarado (OEHHA): advisor to development
 * Dr. Joshua Apte (UC Berkeley): project PI
+* Cassidy Barrientos (UC Berkeley): PhD student, new California ISRM development
 * Amy Budahn (OEHHA, now CARB): advisor to development
-* Libby Koolik (UC Berkeley): project technical lead
+* Libby Koolik (UC Berkeley): PhD candidate, ECHO-AIR technical lead, 
 * Thomas Le (UC Berkeley): undergraduate research assistant, investigated pipelines for regulatory data
 * Dr. Julian Marshall (UW): advisor to development
 * Dr. Laurel Plummer (OEHHA): advisor to development
-* Clara Rong (UC Berkeley): undergraduate research assistant, reviewed and revised documentation
+* Meghana Raj (UC Berkeley): undergraduate research assistant, code developer, documentation support
+* Lucas Rojas Mendoza (UC Berkeley): PhD student, new California ISRM development
+* Clara Rong (UC Berkeley): undergraduate research assistant, documentation support
+* Benjamin Salop (UC Berkeley): undergraduate research assistant, code developer, documentation support
+* Dr. Yuzhou Wang (UC Berkeley, now Texas A&M): postdoctoral researcher, new California InMAP development
 * Justin Ward (Google): supported parallelization of main program
-* Amy Yao (UC Berkeley): undergraduate research assistant, code developer
+* Amy Yao (UC Berkeley): undergraduate research assistant, code developer, documentation support
 
 Additionally, we thank the California Office of Environmental Health Hazard Assessment (OEHHA) and Google.org for funding this work.
 
