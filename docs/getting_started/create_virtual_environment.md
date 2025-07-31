@@ -2,7 +2,6 @@
 layout: default
 title: 3. Create Virtual Environment
 parent: Getting Started
-grand_parent: Prerequisites
 nav_order: 4
 ---
 
