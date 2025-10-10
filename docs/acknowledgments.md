@@ -29,5 +29,7 @@ Additionally, we thank the California Office of Environmental Health Hazard Asse
 
 If you have any questions related to ECHO-AIR, please contact echo.air.model@gmail.com.
 
+If you have used ECHO-AIR and would like to cite it, please refer to our [Suggested Citation](https://echo-air-model.github.io/docs/other_information/suggested_citation.html).
+
 ----
 Additionally, we would like to thank the team responsible for developing and maintaining the Just the Docs template used for this documentation. You can get started with your own easy to make website by downloading their template [here](https://github.com/just-the-docs/just-the-docs).
