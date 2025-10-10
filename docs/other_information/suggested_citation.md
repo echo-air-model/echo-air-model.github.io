@@ -2,7 +2,6 @@
 layout: default
 title: Suggested Citation
 parent: Other Information
-nav_exclude: true
 ---
 
 ## Suggested Citation
