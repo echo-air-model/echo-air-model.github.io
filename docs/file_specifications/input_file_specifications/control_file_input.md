@@ -111,6 +111,9 @@ This section provides the model with a naming structure for output files.
   <tr>
     <td> OUTPUT_EMIS </td><td> No </td><td> If enabled, will output emissions allocated to the ISRM grid </td><td> leave blank </td>
   </tr>
+  <tr>
+    <td> OUTPUT_PNG </td><td> No </td><td> If enabled, will output png files </td><td> leave blank </td>
+  </tr>
 </table>
 
 ### Options for Output Regions
