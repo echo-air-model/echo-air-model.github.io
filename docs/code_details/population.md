@@ -24,6 +24,7 @@ The `population` object stores detailed Census tract-level population data for t
 * `crs`: the inherent coordinate reference system associated with the emissions input
 * `pop_exp`: a geodataframe containing the population information with associated spatial information, summarized across age bins
 * `pop_hia`: a geodataframe containing the population information with associated spatial information, broken out by age bin
+* `population_columns`: a list of population columns to be used from the input population file
 
 ### Internal Functions
 * `check_path`: checks to see if the file exists at the path specified and returns whether the file is valid
