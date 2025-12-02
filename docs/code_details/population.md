@@ -12,6 +12,7 @@ The `population` object stores detailed Census tract-level population data for t
 ### Inputs
 * `file_path`: the file path of the raw population data
 * `load_file`: a Boolean indicating whether or not the file should be loaded (for debugging)
+* `population_columns`: a list of population columns to be used from the input population file
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
 
