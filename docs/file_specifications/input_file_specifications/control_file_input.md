@@ -57,6 +57,9 @@ This section provides the model with a naming structure for output files.
 <tr>
     <td> POPULATION_FILENAME </td><td> Yes </td><td> Provides the path to the population file. For shapefiles, use the .shp file. </td><td> /home/[your_name]/[your/path/here]/echo_air/data/ca2010.feather </td>
   </tr>
+<tr>
+    <td> POPULATION_COLUMNS </td><td> Yes </td><td> Provides a list of population groups to use from input file. </td>
+  </tr>
 </table>
 
 ### Health Run Controls
