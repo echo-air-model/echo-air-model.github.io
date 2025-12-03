@@ -18,7 +18,7 @@ The population file needs to have the following columns in order to run properly
 * **START_AGE**: the starting age of the bin
 * **END_AGE**:  the ending age of the bin
 * **AGE_BIN**: the age bin for this population sample. It should be formatted as `START_AGE` TO `END_AGE` (e.g., `0TO0`, `20TO24`). Age bins should be non-overlapping (e.g., not `20TO25` and `25TO30`).
-* Seven racial/ethnic group population columns (total people per geographic unit).
+* Seven racial/ethnic group population columns (total people per geographic unit). For example:
    * **ASIAN**: non-Hispanic Asian 
    * **BLACK**: non-Hispanic Black
    * **HISLA**: Hispanic of any race
