@@ -185,14 +185,6 @@ Combines the three endpoint summary tables into one export file
    2. Removes excess columns
    3. Saves as CSV file
 
-### `create_rename_dict`
-Makes a global rename code dictionary for easier updating
-1. Inputs: None
-2. Outputs:
-   * `logging_code`: a dictionary that maps endpoint names to log statement codes
-3. Methodology:
-   1. Defines a dictionary and returns it.
-
 ### `rename_for_shapefile`
 Makes sure all columns are less than 10 characters in length, if not, truncates them or renames them
 1. Inputs:
