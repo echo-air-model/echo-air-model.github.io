@@ -223,10 +223,9 @@ Creates map of PWM concentrations using simple chloropleth.
    1. Reads in the California boundary file and projects it to the matching coordinate reference system.
    2. Creates a matching map to the one created in `concentration.visualize_concentrations()`.
 
-### `create_rename_dict`
-Makes a global rename code dictionary for easier updating
-1. Inputs: None
+### `rename_for_shapefile`
+Makes sure all columns are less than 10 characters in length, if not, truncates them or renames them
+1. Inputs:
+   * `df`: the dataframe object
 2. Outputs:
-   * `logging_code`: a dictionary that maps endpoint names to log statement codes
-3. Methodology:
-   1. Defines a dictionary and returns it.
+   * `df`: the dataframe object with columns names less than 10
