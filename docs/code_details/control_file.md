@@ -27,6 +27,8 @@ The `control_file` object is used to check and read the control file for a run:
 * `verbose`: a Boolean indicating whether the user wants to run in verbose mode
 * `output_exposure`: a Boolean indicating whether exposure should be output
 * `detailed_conc`: a Boolean indicating whether concentrations should should be output as totals or by pollutant
+* `population_columns`: a list of population columns to use from the population input file
+* `output_png`: a Boolean indicating whether to output png figures
 
 ### Internal Functions
 * `check_path`: checks if a file exists at the given control file path

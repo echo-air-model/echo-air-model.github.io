@@ -14,6 +14,7 @@ Creates a dataframe ready for exposure calculations
 1. Inputs:
    * `conc`: concentration object from `concentration.py`
    * `isrm_pop_alloc`: population object (from `population.py`) re-allocated to the ISRM grid cell geometry
+   * `population_columns`: a list of population columns to use from the population input file
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs
@@ -53,6 +54,7 @@ Estimates the population-weighted mean exposure for a given group
 Returns a table of overall disparity metrics by racial/ethnic group
 1. Inputs:
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
+   * `population_columns`: a list of population columns to use from the population input file
 2. Outputs:
    * `pwm_df`: a dataframe containing the PWM, absolute disparity, and relative disparity of each group
 3. Methodology:
@@ -65,6 +67,7 @@ Returns a table of overall disparity metrics by racial/ethnic group
 Creates a dataframe of exposure percentiles for plotting
 1. Inputs:
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
+   * `population_columns`: a list of population columns to use from the population input file
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 2. Outputs:
    * `df_pctl`: a dataframe of exposure concentrations by percentile of population exposed by group
@@ -83,6 +86,7 @@ Calls the other exposure justice functions in order
 1. Inputs:
    * `conc`: concentration object from `concentration.py`
    * `isrm_pop_alloc`: population object (from `population.py`) re-allocated to the ISRM grid cell geometry
+   * `population_columns`: a list of population columns to use from the population input file
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
 2. Outputs:
@@ -96,28 +100,30 @@ Calls the other exposure justice functions in order
 
 ### `export_exposure_gdf`
 Exports the exposure concentrations and population estimates as a shapefile
-1. Inputs: 
+1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `exposure_gdf`: a dataframe containing the exposure concentrations and population estimates for each group
    * `shape_out`: a filepath string of the location of the shapefile output directory
    * `f_out`: the name of the file output category (will append additional information)
-2. Outputs:
+3. Outputs:
    * A shapefile will be output into the `shape_out` directory.
    * The function returns `fname` as a surrogate for completion (otherwise irrelevant)
-3. Methodology:
+4. Methodology:
    1. Creates a filename and path for the export.
    2. Updates the columns slightly for shapefile naming
    3. Exports the shapefile.
 
 ### `export_exposure_csv`
 Exports the exposure concentrations and population estimates as a CSV file
-1. Inputs: 
+1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `exposure_gdf`: a dataframe containing the exposure concentrations and population estimates for each group
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information)
-2. Outputs:
+3. Outputs:
    * A CSV file will be output into the `output_dir`.
    * The function returns `fname` as a surrogate for completion (otherwise irrelevant)
-3. Methodology:
+4. Methodology:
    1. Creates a filename and path for the export.
    2. Updates the column names for more straightforward interpretation
    3. Exports the results as a comma-separated value (CSV) file.
@@ -138,15 +144,16 @@ Exports the exposure concentrations and population estimates as a shapefile
 
 ### `plot_percentile_exposure`
 Creates a plot of exposure concentration by percentile of each group's population
-1. Inputs: 
+1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information)
    * `exposure_pctl`: a dataframe of exposure concentrations by percentile of population exposed by group
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
-2. Outputs:
+3. Outputs:
    * The function does not return anything, but a lineplot image (PNG) will be output into the `output_dir`.
-3. Methodology:
+4. Methodology:
    1. Creates a melted (un-pivoted) version of the percentiles dataframe.
    2. Multiplies the percentile by 100 to span 0-100 instead of 0-1.
    3. Maps the racial/ethnic group names to better formatted names (e.g., "HISLA" --> "Hispanic/Latino")
@@ -155,7 +162,8 @@ Creates a plot of exposure concentration by percentile of each group's populatio
 
 ### `export_exposure`
 Calls each of the exposure output functions in parallel
-1. Inputs: 
+1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `exposure_gdf`: a dataframe containing the exposure concentrations and population estimates for each group
    * `exposure_disparity`: a dataframe containing the population-weighted mean exposure concentrations for each group
    * `exposure_pctl`: a dataframe of exposure concentrations by percentile of population exposed by group
@@ -164,9 +172,9 @@ Calls each of the exposure output functions in parallel
    * `f_out`: the name of the file output category (will append additional information)
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
-2. Outputs:
+3. Outputs:
    * The function does not return anything, but a shapefile will be output into the `output_dir`.
-3. Methodology:
+4. Methodology:
    1. Creates a filename and path for the export.
    2. Updates the columns slightly for shapefile naming
    3. Exports the shapefile.
@@ -185,7 +193,8 @@ Estimates population-weighted mean for a subset of the full_dataset.
 
 ### `export_pwm_map`
 Creates the exports for the population-weighted products requested when the user inputs an output resolution larger than the ISRM grid
-1. Inputs: 
+1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `pop_exp`: a dataframe containing the population information without age-resolution
    * `conc`: a concentration object
    * `output_dir`: a filepath string of the location of the output directory
@@ -193,8 +202,8 @@ Creates the exports for the population-weighted products requested when the user
    * `f_out`: the name of the file output category (will append additional information)
    * `ca_shp_path`: a filepath string of the location of the California boundary shapefile
    * `shape_out`: a filepath string of the location of the shapefile output directory
-2. Outputs: None
-3. Methodology:
+3. Outputs: None
+4. Methodology:
    1. Combines the concentration data, geographic areas data, and the population data by intersecting all three together.
    2. Estimates the population counts for each group in each of these intersected areas.
    3. Estimates the population-weighted mean concentration for each group for each geographic subarea.
@@ -214,10 +223,9 @@ Creates map of PWM concentrations using simple chloropleth.
    1. Reads in the California boundary file and projects it to the matching coordinate reference system.
    2. Creates a matching map to the one created in `concentration.visualize_concentrations()`.
 
-### `create_rename_dict`
-Makes a global rename code dictionary for easier updating
-1. Inputs: None
+### `rename_for_shapefile`
+Makes sure all columns are less than 10 characters in length, if not, truncates them or renames them
+1. Inputs:
+   * `df`: the dataframe object
 2. Outputs:
-   * `logging_code`: a dictionary that maps endpoint names to log statement codes
-3. Methodology:
-   1. Defines a dictionary and returns it.
+   * `df`: the dataframe object with columns names less than 10

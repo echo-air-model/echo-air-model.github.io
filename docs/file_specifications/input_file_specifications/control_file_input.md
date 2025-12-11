@@ -57,6 +57,9 @@ This section provides the model with a naming structure for output files.
 <tr>
     <td> POPULATION_FILENAME </td><td> Yes </td><td> Provides the path to the population file. For shapefiles, use the .shp file. </td><td> /home/[your_name]/[your/path/here]/echo_air/data/ca2010.feather </td>
   </tr>
+<tr>
+    <td> POPULATION_COLUMNS </td><td> Yes </td><td> Provides a list of population groups to use from input file. Note that "TOTAL" must be included as a population column. </td><td>TOTAL,ASIAN,BLACK,HISLA,INDIG,PACIS,WHITE,OTHER</td>
+  </tr>
 </table>
 
 ### Health Run Controls
@@ -110,6 +113,9 @@ This section provides the model with a naming structure for output files.
   </tr>
   <tr>
     <td> OUTPUT_EMIS </td><td> No </td><td> If enabled, will output emissions allocated to the ISRM grid </td><td> leave blank </td>
+  </tr>
+  <tr>
+    <td> OUTPUT_PNG </td><td> No </td><td> If enabled, will output png files </td><td> leave blank </td>
   </tr>
 </table>
 

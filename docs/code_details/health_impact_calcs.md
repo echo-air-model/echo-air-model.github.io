@@ -13,6 +13,7 @@ The `health_impact_calcs` script file contains a number of functions that help c
 Creates the hia_inputs object.
 1. Inputs:
    * `pop`: population object input
+   * `population_columns`: a list of population columns to use from the population input file
    * `load_file`: a Boolean telling the program to load or not
    * `verbose`: a Boolean telling the program to return additional log statements or not
    * `geodata`: the geographic data from the ISRM
@@ -51,15 +52,16 @@ Makes a global logging code for easier updating
 ### `calculate_excess_mortality`
 Estimates excess mortality for a given `endpoint` and `function`
 1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `conc`: a float with the exposure concentration for a given geography
    * `health_data_obj`: a `health_data` object as defined in the `health_data.py` supporting script
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `function`: the health impact function of choice (currently only `krewski` is built out)
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
-2. Outputs
+3. Outputs
    * `pop_inc_conc`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
-3. Methodology:
+4. Methodology:
    1. Creates clean, simplified copies of the `detailed_conc` method of the `conc` object and the `pop_inc` method of the `health_data_obj`.
    2. Merges these two dataframes on the ISRM_ID field.
    3. Estimates excess mortality on a row-by-row basis using the `function`.
@@ -101,6 +103,7 @@ Creates a map image (PNG) of the excess mortality associated with an `endpoint` 
 Exports mortality as a shapefile
 1. Inputs:
    * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
+   * `population_columns`: a list of population columns to use from the population input file
    * `group`: the racial/ethnic group name
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `output_dir`: a filepath string of the location of the output directory
@@ -117,15 +120,16 @@ Exports mortality as a shapefile
 ### `export_health_impacts_csv`
 Exports mortality as a csv
 1. Inputs:
+   * `population_columns`: a list of population columns to use from the population input file
    * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
-2. Outputs
+3. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
-3. Methodology:
+4. Methodology:
    1. Creates the output file path (`fname`) using inputs.
    2. Revises column names for clarity
    3. Exports the geodataframe to csv.
@@ -134,6 +138,7 @@ Exports mortality as a csv
 Creates a summary table of health impacts by racial/ethnic group
 1. Inputs:
    * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
+   * `population_columns`: a list of population columns to use from the population input file
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `l`: an intermediate string that has the endpoint label string (e.g., ACM_)
@@ -151,6 +156,7 @@ Calls `plot_total_mortality` and `export_health_impacts` in one clean function c
 1. Inputs:
    * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
    * `ca_shp_fp`: a filepath string of the California state boundary shapefile
+   * `population_columns`: a list of population columns to use from the population input file
    * `group`: the racial/ethnic group name
    * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
    * `output_dir`: a filepath string of the location of the output directory
@@ -179,10 +185,9 @@ Combines the three endpoint summary tables into one export file
    2. Removes excess columns
    3. Saves as CSV file
 
-### `create_rename_dict`
-Makes a global rename code dictionary for easier updating
-1. Inputs: None
+### `rename_for_shapefile`
+Makes sure all columns are less than 10 characters in length, if not, truncates them or renames them
+1. Inputs:
+   * `df`: the hia dataframe object
 2. Outputs:
-   * `logging_code`: a dictionary that maps endpoint names to log statement codes
-3. Methodology:
-   1. Defines a dictionary and returns it.
+   * `df`: the hia dataframe object with columns names less than 10

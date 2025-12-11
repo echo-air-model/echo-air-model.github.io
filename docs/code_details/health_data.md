@@ -11,6 +11,7 @@ The `health_data` object stores and manipulates built-in health data (population
 
 ### Inputs
 * `pop_alloc`: a geodataframe of population allocated to the ISRM grid geometry
+* `population_columns`: a list of population columns to use from the population input file
 * `incidence_fp`: a string containing the file path to the background incidence dataset
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 * `race_stratified`: a Boolean indicating whether race-stratified incidence rates should be used
