@@ -30,6 +30,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `crs`: the inherent coordinate reference system associated with the emissions input
 * `emissions_data`: complete, detailed emissions data from the source
 * `emissions_data_clean`: simplified emissions in each grid cell
+* `dpm`: a Boolean indicating whether or not DPM emissions were provided
 
 ### Calculated Attributes
 * `PM25`: primary PM<sub>2.5</sub> emissions in each grid cell
@@ -37,6 +38,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `VOC`: VOC compound emissions in each grid cell
 * `NOX`: NOx emissions in each grid cell
 * `SOX`: SOx emissions in each grid cell
+* `DPM`: DPM emissions in each grid cell, if given
 * `LA_flag`, `LB_flag`, `LC_flag`: Booleans indicating whether each layer should be calculated based on emissions release heights
 
 ### Internal Functions
