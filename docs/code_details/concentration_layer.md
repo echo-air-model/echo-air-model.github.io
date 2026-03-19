@@ -32,8 +32,8 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `dpm`: a Boolean indicating whether DPM calculations should run
 
 ### Calculated Attributes
-* `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`, 'DPMe': geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
-* `pPM25`, `pNH4`, `pVOC`, `pNO3`, `pSO4`, 'pDPM': geodataframes of the concentrations from each primary pollutant from the emissions of that pollutant in that `layer`
+* `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`, `DPMe`: geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
+* `pPM25`, `pNH4`, `pVOC`, `pNO3`, `pSO4`, `pDPM`: geodataframes of the concentrations from each primary pollutant from the emissions of that pollutant in that `layer`
 * `detailed_conc`: geodataframe containing columns for each primary pollutant's contribution to the total ground-level PM<sub>2.5</sub> concentrations
 
 ### Simple Functions
