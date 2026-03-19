@@ -17,6 +17,7 @@ Creates a dataframe ready for exposure calculations
    * `population_columns`: a list of population columns to use from the population input file
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `dpm`: a Boolean indicating whether or not to include DPM in calculations
 2. Outputs
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
 3. Methodology:
@@ -30,6 +31,7 @@ Adds an intermediate column that multiplies population by exposure concentration
 1. Inputs:
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
    * `group`: the racial/ethnic group name
+   * `dpm`: a Boolean indicating whether to add a DPM_PWM column as well
 2. Outputs:
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group, now with PWM column
 3. Methodology:
@@ -44,6 +46,7 @@ Estimates the population-weighted mean exposure for a given group
 1. Inputs:
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
    * `group`: the racial/ethnic group name
+   * `dpm`: a Boolean indicating whether or not to estimate PWMs for DPM
 2. Outputs:
    * `PWM_group`: the group-level population weighted mean exposure concentration (float)
 3. Methodology:
@@ -55,6 +58,7 @@ Returns a table of overall disparity metrics by racial/ethnic group
 1. Inputs:
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
    * `population_columns`: a list of population columns to use from the population input file
+   * `dpm`: a Boolean indicating whether or not to include DPM in calculations
 2. Outputs:
    * `pwm_df`: a dataframe containing the PWM, absolute disparity, and relative disparity of each group
 3. Methodology:
@@ -69,6 +73,7 @@ Creates a dataframe of exposure percentiles for plotting
    * `exposure_gdf`: a geodataframe with the exposure concentrations and allocated population by racial group
    * `population_columns`: a list of population columns to use from the population input file
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `dpm`: a Boolean indicating whether or not to calculate percentiles for DPM
 2. Outputs:
    * `df_pctl`: a dataframe of exposure concentrations by percentile of population exposed by group
 3. Methodology:
