@@ -15,6 +15,7 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `layer`: the layer number (0, 1, or 2)
 * `output_dir`: a string pointing to the output directory
 * `output_emis_flag`: a Boolean indicating whether ISRM-allocated emissions should be output
+* `output_png_flag`: a Boolean indicating whether PNGs should be output
 * `run_parallel`: a Boolean indicating whether or not to run in parallel
 * `shp_path`: data variable file path for the border
 * `output_region`: a geodataframe containing only the region of interest
@@ -28,10 +29,11 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `crs`: the coordinate reference system associated with the ISRM grid
 * `name`: a string representing the run name preferred by the user
 * `check`: a Boolean indicating whether the program should run, or if it should just check the inputs (useful for debugging)
+* `dpm`: a Boolean indicating whether DPM calculations should run
 
 ### Calculated Attributes
-* `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`: geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
-* `pPM25`, `pNH4`, `pVOC`, `pNO3`, `pSO4`: geodataframes of the concentrations from each primary pollutant from the emissions of that pollutant in that `layer`
+* `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`, 'DPMe': geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
+* `pPM25`, `pNH4`, `pVOC`, `pNO3`, `pSO4`, 'pDPM': geodataframes of the concentrations from each primary pollutant from the emissions of that pollutant in that `layer`
 * `detailed_conc`: geodataframe containing columns for each primary pollutant's contribution to the total ground-level PM<sub>2.5</sub> concentrations
 
 ### Simple Functions
