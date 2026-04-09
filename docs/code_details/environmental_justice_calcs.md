@@ -196,8 +196,9 @@ Estimates population-weighted mean for a subset of the full_dataset.
    * `name`: the specific name of the region type (e.g., SF BAY AREA)
    * `group`: the racial/ethnic group of interest
    * `full_dataset`: a dataframe containing all of the concentraion and population intersection objects with regions assigned
+   * `conc_col`: name of the column that the PWM should be calculated for
 2. Outputs:
-   * `pwm`: the population-weighted mean concentration of PM<sub>2.5</sub>
+   * `pwm`: the population-weighted mean concentration of the given concentration column
 3. Methodology:
    1. Slices a releevant part of the full dataset using the `NAME` column.
    2. Estimates the population-weighted mean for that geographic area only.
@@ -213,6 +214,7 @@ Creates the exports for the population-weighted products requested when the user
    * `f_out`: the name of the file output category (will append additional information)
    * `ca_shp_path`: a filepath string of the location of the California boundary shapefile
    * `shape_out`: a filepath string of the location of the shapefile output directory
+   * `dpm`: a Boolean indicating whether or not to include dpm
 3. Outputs: None
 4. Methodology:
    1. Combines the concentration data, geographic areas data, and the population data by intersecting all three together.
@@ -229,6 +231,8 @@ Creates map of PWM concentrations using simple chloropleth.
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information)
    * `ca_shp_path`: a filepath string of the location of the California boundary shapefile
+   * `pol_label`: the name of the pollutant
+   * `data_col`: the specific column name to plot
 2. Outputs: None
 3. Methodology:
    1. Reads in the California boundary file and projects it to the matching coordinate reference system.
