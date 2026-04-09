@@ -59,6 +59,7 @@ Estimates excess mortality for a given `endpoint` and `function`
    * `function`: the health impact function of choice (currently only `krewski` is built out)
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `dpm`: a Boolean indicating whether it is a dpm calculation
 3. Outputs
    * `pop_inc_conc`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
 4. Methodology:
@@ -82,6 +83,7 @@ Creates a map image (PNG) of the excess mortality associated with an `endpoint` 
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `pollutant`: name of pollutant to plot
 2. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
 3. Methodology:
@@ -110,6 +112,7 @@ Exports mortality as a shapefile
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `pollutant`: name of the pollutant whose health impacts will be calculated
 2. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
 3. Methodology:
@@ -127,6 +130,7 @@ Exports mortality as a csv
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `pollutant`: name of the pollutant whose health impacts will be calculated
 3. Outputs
    * `fname`: a string filename made by combining the `f_out` with the `group` and `endpoint`.
 4. Methodology:
@@ -144,6 +148,7 @@ Creates a summary table of health impacts by racial/ethnic group
    * `l`: an intermediate string that has the endpoint label string (e.g., ACM_)
    * `endpoint_nice`: an intermediate string that has a nicely formatted version of the endpoint (e.g., All Cause)
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   *  `pollutant`: name of the pollutant whose health impacts will be calculated
 2. Outputs
    * `hia_summary`: a summary dataframe containing population, excess mortality, and excess mortality rate per demographic group
 3. Methodology:
@@ -164,6 +169,7 @@ Calls `plot_total_mortality` and `export_health_impacts` in one clean function c
    * `shape_out`: a filepath string for shapefiles
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
+   * `dpm`: A Boolean indicating whether or not DPM should be visualized
 2. Outputs
    * `hia_summary`: a summary dataframe containing population, excess mortality, and excess mortality rate per demographic group
 3. Methodology:
@@ -178,7 +184,8 @@ Combines the three endpoint summary tables into one export file
    * `lcm_summary`: a summary dataframe containing population, excess lung cancer mortality, and lung cancer mortality rates
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
-   * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed 
+   * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
+   * `dpm_summary`: an optional summary dataframe containing population, excess cancer incidence, and cancer incidence rates 
 2. Outputs: None
 3. Methodology:
    1. Merges the summary dataframes together
