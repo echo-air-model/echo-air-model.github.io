@@ -29,17 +29,18 @@ The `concentration_layer` object runs ISRM-based calculations using a single ver
 * `crs`: the coordinate reference system associated with the ISRM grid
 * `name`: a string representing the run name preferred by the user
 * `check`: a Boolean indicating whether the program should run, or if it should just check the inputs (useful for debugging)
+* `pollutants`: a list of pollutants present from emissions object
 * `dpm`: a Boolean indicating whether DPM calculations should run
 
 ### Calculated Attributes
 * `PM25e`, `NH3e`, `VOCe`, `NOXe`, `SOXe`, `DPMe`: geodataframes of the emissions (for each pollutant) from that layer re-allocated onto the ISRM grid
 * `pPM25`, `pNH4`, `pVOC`, `pNO3`, `pSO4`, `pDPM`: geodataframes of the concentrations from each primary pollutant from the emissions of that pollutant in that `layer`
-* `detailed_conc`: geodataframe containing columns for each primary pollutant's contribution to the total ground-level PM<sub>2.5</sub> concentrations
+* `detailed_conc`: geodataframe containing columns for total ground-level DPM concentrations and each primary pollutant's contribution to the total ground-level PM<sub>2.5</sub> concentrations
 
 ### Simple Functions
 * `allocate_emissions`: inputs the emissions layer and the ISRM geography, and re-allocates the emissions to the ISRM geography using an area-based allocation procedure
 * `cut_emissions`: inputs the pollutant geodataframe from the emissions object and slices it based on the minimum and maximum release heights (minimum inclusive, maximum exclusive) associated with the ISRM vertical layer
-* `process_emissions`: for each of the five primary pollutants, runs `intersect_geometries` and then `allocate_emissions` to return the geodataframes of emissions of each primary pollutant released in the `layer` allocated to the ISRM grid
+* `process_emissions`: for each of the five (six with DPM) primary pollutants, runs `intersect_geometries` and then `allocate_emissions` to return the geodataframes of emissions of each primary pollutant released in the `layer` allocated to the ISRM grid
 * `visualize_individual_emissions`: creates a 5-panel plot of total emissions for each individual pollutant and exports it as PNG file 
 * `save_allocated_emis`: outputs ISRM-allocated emissions to a shapefile
 * `get_concentration`: for a pollutant's emission layer (`POLe`), the ISRM matrix for that pollutant, and the `layer` ID, estimates the concentration at ground-level for the primary pollutant (`pPOL`)
