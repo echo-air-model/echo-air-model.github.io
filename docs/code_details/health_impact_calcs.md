@@ -213,3 +213,11 @@ Estimates excess cancer risk from DPM following OEHHA (2015) methodology
    * `avg_time`: a string identifying if the user wants to run 30-year averaging time or 70-year
 2. Outputs:
    * `dpm_risk`: a vector with the excess cancer risk from DPM
+  
+### `dpm_excess_incidence`
+For each given risk and population count, calculates the excess cancer incidence
+1. Inputs:
+   * `risk`: numerical risk value
+   * `population`: population count
+2. Outputs:
+   * `excess_incidence`: a value for the excess incidence
