@@ -17,14 +17,13 @@ The `isrm` object loads, stores, and manipulates the ISRM grid data.
 * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
 * `dpm`: a Boolean indicating whether the DPM ISRM should be loaded
-* `nox_g`: a Boolean indicating whether the NOXG ISRM should be loaded
 * `LA_flag`: a Boolean indicating whether or not to load layer A of ISRM
 * `LB_flag`: a Boolean indicating whether or not to load layer B of ISRM
 * `LC_flag`: a Boolean indicating whether or not to load layer C of ISRM
 
 ### Attributes
 * `nh3_path_L{A/B/C}`, `nox_path_L{A/B/C}`, `pm25_path_L{A/B/C}`, `sox_path_L{A/B/C}`, `voc_path_L{A/B/C}`: the filepath strings for each layer of each primary pollutant ISRM variable
-* `dpm_path_L{A/B/C}`, `noxg_path_L{A/B/C}`: the filepath strings for each layer of optional pollutant ISRM variables
+* `dpm_path_L{A/B/C}`: the filepath strings for each layer of optional pollutant ISRM variables
 * `valid_file`: a Boolean indicating whether or not the file provided is valid
 * `valid_geo_file`: a Boolean indicating whether the ISRM geometry file provided is valid
 * `geodata`: a geodataframe containing the ISRM feather file information
@@ -35,7 +34,7 @@ The `isrm` object loads, stores, and manipulates the ISRM grid data.
 * `receptor_IDs`: the IDs associated with ISRM receptors within the `output_region`
 * `receptor_geometry`: the geospatial information associated with the ISRM receptors within the `output_region`
 * `PM25`, `NH3`, `NOx`, `SOX`, `VOC`: the ISRM matrices for each of the primary pollutants
-* `DPM`, `NOXG`: the ISRM matrices for each of the optional pollutants
+* `DPM`: the ISRM matrices for each of the optional pollutants
 
 ### Internal Functions
 * `get_isrm_files`: appends the file names to the isrm_path input to generate full file paths
