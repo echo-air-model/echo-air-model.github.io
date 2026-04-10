@@ -55,13 +55,13 @@ Estimates excess mortality for a given `endpoint` and `function`
    * `population_columns`: a list of population columns to use from the population input file
    * `conc`: a float with the exposure concentration for a given geography
    * `health_data_obj`: a `health_data` object as defined in the `health_data.py` supporting script
-   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
+   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', 'LUNG CANCER', or 'CANCER'
    * `function`: the health impact function of choice (currently only `krewski` is built out)
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
    * `dpm`: a Boolean indicating whether it is a dpm calculation
 3. Outputs
-   * `pop_inc_conc`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
+   * `pop_inc_conc`: a dataframe containing excess mortality or incidence for the `endpoint` using the `function` provided
 4. Methodology:
    1. Creates clean, simplified copies of the `detailed_conc` method of the `conc` object and the `pop_inc` method of the `health_data_obj`.
    2. Merges these two dataframes on the ISRM_ID field.
@@ -78,7 +78,7 @@ Creates a map image (PNG) of the excess mortality associated with an `endpoint` 
    * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
    * `ca_shp_fp`: a filepath string of the California state boundary shapefile
    * `group`: the racial/ethnic group name
-   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
+   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', 'LUNG CANCER', or 'CANCER'
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
@@ -93,21 +93,21 @@ Creates a map image (PNG) of the excess mortality associated with an `endpoint` 
    4. Clips the dataframe to the California boundary.
    5. Adds area-normalized columns to the `hia_df` for more intuitive plotting.
    6. Grabs the minimums and sets them to 10<sup>-9</sup> in order to avoid logarithm conversion errors.
-   7. Updates the 'MORT_OVER_POP' column to avoid 100% mortality that arises from the update in step 6.
+   7. Updates the 'MORT_OVER_POP' column to avoid 100% mortality/incidence that arises from the update in step 6.
    8. Initializes the figure and plots four panes:
       1. Population density: plots the area-normalized population estimates for the group on a log-normal scale.
-      2. PM<sub>2.5</sub> exposure concentrations: plots the exposure concentration on a log-normal scale.
-      3. Excess mortality per area: plots the excess mortality per unit area on a log-normal scale.
-      4. Excess mortality per population: plots the excess mortality per population for the group on a log-normal scale.
+      2. Pollutant exposure concentrations: plots the exposure concentration on a log-normal scale.
+      3. Excess mortality/incidence per area: plots the excess mortality/incidence per unit area on a log-normal scale.
+      4. Excess mortality/incidence per population: plots the excess mortality/incidence per population for the group on a log-normal scale.
    9. Performs a bit of clean-up and formatting before exporting.
   
 ### `export_health_impacts`
 Exports mortality as a shapefile
 1. Inputs:
-   * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
+   * `hia_df`: a dataframe containing excess mortality or incidence for the `endpoint` using the `function` provided
    * `population_columns`: a list of population columns to use from the population input file
    * `group`: the racial/ethnic group name
-   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
+   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', 'LUNG CANCER', or 'CANCER'
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
@@ -124,8 +124,8 @@ Exports mortality as a shapefile
 Exports mortality as a csv
 1. Inputs:
    * `population_columns`: a list of population columns to use from the population input file
-   * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
-   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
+   * `hia_df`: a dataframe containing excess mortality or incidence for the `endpoint` using the `function` provided
+   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', 'LUNG CANCER', or 'CANCER'
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
@@ -159,11 +159,11 @@ Creates a summary table of health impacts by racial/ethnic group
 ### `visualize_and_export_hia`
 Calls `plot_total_mortality` and `export_health_impacts` in one clean function call.
 1. Inputs:
-   * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
+   * `hia_df`: a dataframe containing excess mortality or incidence for the `endpoint` using the `function` provided
    * `ca_shp_fp`: a filepath string of the California state boundary shapefile
    * `population_columns`: a list of population columns to use from the population input file
    * `group`: the racial/ethnic group name
-   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
+   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', 'LUNG CANCER', or 'CANCER'
    * `output_dir`: a filepath string of the location of the output directory
    * `f_out`: the name of the file output category (will append additional information) 
    * `shape_out`: a filepath string for shapefiles
@@ -171,7 +171,7 @@ Calls `plot_total_mortality` and `export_health_impacts` in one clean function c
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
    * `dpm`: A Boolean indicating whether or not DPM should be visualized
 2. Outputs
-   * `hia_summary`: a summary dataframe containing population, excess mortality, and excess mortality rate per demographic group
+   * `hia_summary`: a summary dataframe containing population, excess mortality/incidence, and excess mortality/incidence rate per demographic group
 3. Methodology:
    1. Calls `plot_total_mortality`.
    2. Calls `export_health_impacts.
