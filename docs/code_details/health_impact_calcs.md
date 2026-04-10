@@ -143,14 +143,14 @@ Creates a summary table of health impacts by racial/ethnic group
 1. Inputs:
    * `hia_df`: a dataframe containing excess mortality for the `endpoint` using the `function` provided
    * `population_columns`: a list of population columns to use from the population input file
-   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', or 'LUNG CANCER'
+   * `endpoint`: a string containing either 'ALL CAUSE', 'ISCHEMIC HEART DISEASE', 'LUNG CANCER', or 'CANCER'
    * `verbose`: a Boolean indicating whether or not detailed logging statements should be printed
    * `l`: an intermediate string that has the endpoint label string (e.g., ACM_)
    * `endpoint_nice`: an intermediate string that has a nicely formatted version of the endpoint (e.g., All Cause)
    * `debug_mode`: a Boolean indicating whether or not to output debug statements
    *  `pollutant`: name of the pollutant whose health impacts will be calculated
 2. Outputs
-   * `hia_summary`: a summary dataframe containing population, excess mortality, and excess mortality rate per demographic group
+   * `hia_summary`: a summary dataframe containing population, excess mortality/incidence, and excess mortality/incidence rate per demographic group
 3. Methodology:
    1. Cleans up the hia_df by changing column names and splitting population and mortality
    2. Gets total population and mortality by group
@@ -198,3 +198,18 @@ Makes sure all columns are less than 10 characters in length, if not, truncates 
    * `df`: the hia dataframe object
 2. Outputs:
    * `df`: the hia dataframe object with columns names less than 10
+  
+### `hazard_quotient`
+Calculates the Hazard Quotient for each ISRM grid cell
+1. Inputs:
+   * `conc`: a vector with the DPM concentration for each grid cell
+2. Outputs:
+   * `df_hq`: the dataframe of HQs per grid cell
+
+### `dpm_risk`
+Estimates excess cancer risk from DPM following OEHHA (2015) methodology
+1. Inputs:
+   * `conc`: a vector with the DPM concentration for each grid cell
+   * `avg_time`: a string identifying if the user wants to run 30-year averaging time or 70-year
+2. Outputs:
+   * `dpm_risk`: a vector with the excess cancer risk from DPM
