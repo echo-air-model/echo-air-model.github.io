@@ -63,7 +63,7 @@ The `emissions` object is primarily built off of `geopandas`. It has the followi
 * `convert_units`: converts units from provided units to μg/s using the unit dictionaries built-in
 * `split_polutants`: converts the emissions layer into separate objects for each pollutant
 * `which_layers`: determines the `LA_flag`, `LB_flag`, and `LC_flag` variables based on the HEIGHT column of the emissions data
-
+* `peek_pollutants`: checks file headers for DPM
 ### External Functions
 * `visualize_emissions`: creates a simple map of emissions for a provided pollutant
 * `get_pollutant_layer`: pulls a single pollutant layer based on `pol_name`
