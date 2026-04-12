@@ -5,10 +5,10 @@ nav_order: 2
 ---
 
 ## Methodology ##
-The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> concentrations as part of the **Concentration Module**. Second, the excess mortality resulting from the concentration change is calculated in the **Health Module**.
+The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> and DPM concentrations as part of the **Concentration Module**. Second, the excess mortality and health impact incidence resulting from the concentration changes is calculated in the **Health Module**.
 
 ### Concentration Module Methodology ###
-The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer for each of the five precursor species: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC). By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,164 sources by 21,164 receptors. The three elevations of release height within the ISRM are:
+The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer for each of the five precursor species: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC), and a matrix layer for diesel particulate matter (DPM). By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,164 sources by 21,164 receptors. The three elevations of release height within the ISRM are:
 * Less than 51.8 meters
 * Between 51.8 and 95 meters
 * Greater than 95 meters.
@@ -33,12 +33,12 @@ For each layer triggered in the preprocessing step:
 
 Once all layers are done:
 
-4. **Sum all Concentrations**: concentrations of PM<sub>2.5</sub> are summed by ISRM grid cell.
+4. **Sum all Concentrations**: concentrations of PM<sub>2.5</sub> and DPM are summed by ISRM grid cell.
 
 ### Health Module Methodology ###
 The ISRM Tool calculations health module follows US EPA BenMAP CE methodology and CARB guidance. 
 
-Currently, the tool is only built out to use the Krewski et al. (2009), endpoint parameters and functions.[^1] The Krewski function is as follows:
+Currently, the tool is only built out to use the Krewski et al. (2009), endpoint parameters and functions for PM<sub>2.5</sub> .[^1] The Krewski function is as follows:
 
    ΔM = (1 - (exp(β<sub>*d*</sub> x *ΔC*<sub>*i*</sub>)<sup>-1</sup>) x *I*<sub>*i*,*d*,*g*</sub> x *P*<sub>*i*,*g*</sub>
 
@@ -46,14 +46,14 @@ where β is the endpoint parameter from Krewski et al. (2009), *d* is the diseas
 
 1. **Preprocessing**: the tool will merge the population and incidence data based on geographic intersections using the `health_data.py` object type. 
 
-2. **Estimation by Endpoint**: the tool will then calculate excess mortality by endpoint:
+2. **Estimation by Endpoint**: the tool will then calculate excess mortality or incidence by endpoint:
    1. The population-incidence data are spatially merged with the exposure concentrations estimated in the Concentration Module.
-   2. For each row of the intersection, the excess mortality is estimated based on the function of choice (currently, only Krewski).
-   3. Excess mortality is summed across age ranges by ISRM grid cell and racial/ethnic group.
+   2. For each row of the intersection, the excess mortality or incidence is estimated based on the function of choice (currently, only Krewski for PM<sub>2.5</sub>).
+   3. Excess mortality or incidence is summed across age ranges by ISRM grid cell and racial/ethnic group.
 
 Once all endpoints are done:
 
-3. **Export and Visualize**: excess mortality is exported as a shapefile and as a plot.
+3. **Export and Visualize**: excess mortality and DPM incidence is exported as a shapefile and as a plot.
 
 ### Other Features ###
 ECHO-AIR has a command called `check-setup` that allows the user to make sure that all of the code and data files are properly saved and named in order to make sure that the program will run.
