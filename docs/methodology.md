@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 ## Methodology ##
-The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> and DPM concentrations as part of the **Concentration Module**. Second, the excess mortality and health impact incidence resulting from the concentration changes is calculated in the **Health Module**.
+The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> and, optionally, DPM concentrations as part of the **Concentration Module**. Second, the excess mortality and health impact incidence resulting from the concentration changes are calculated in the **Health Module**.
 
 ### Concentration Module Methodology ###
 The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer for each of the five precursor species: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC), and a matrix layer for diesel particulate matter (DPM). By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,164 sources by 21,164 receptors. The three elevations of release height within the ISRM are:
@@ -53,7 +53,7 @@ where β is the endpoint parameter from Krewski et al. (2009), *d* is the diseas
 
 Once all endpoints are done:
 
-3. **Export and Visualize**: excess mortality and DPM incidence is exported as a shapefile and as a plot.
+3. **Export and Visualize**: excess mortality and incidence is exported as a shapefile and as a plot.
 
 ### Other Features ###
 ECHO-AIR has a command called `check-setup` that allows the user to make sure that all of the code and data files are properly saved and named in order to make sure that the program will run.
