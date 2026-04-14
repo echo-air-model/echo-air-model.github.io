@@ -8,9 +8,7 @@ nav_order: 1
 
 A repository of scripts used for converting emissions to concentrations and health impacts using the InMAP Source Receptor Matrix (ISRM). 
 
-*Libby H. Koolik, Álvaro Alvarado, Amy Budahn, Laurel Plummer, Julian D. Marshall, and Joshua S. Apte*
-
-Last modified July 29, 2025
+Last modified April 14, 2026
 
 ----
 
