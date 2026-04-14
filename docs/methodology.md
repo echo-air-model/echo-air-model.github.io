@@ -5,10 +5,11 @@ nav_order: 2
 ---
 
 ## Methodology ##
-The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> and, optionally, DPM concentrations as part of the **Concentration Module**. Second, the excess mortality and health impact incidence resulting from the concentration changes are calculated in the **Health Module**.
+The ECHO-AIR model works by a series of two modules. First, the model estimates annual average change in PM<sub>2.5</sub> and, optionally, DPM concentrations as part of the **Concentration Module**. Second, the excess mortality and health impact excess incidence resulting from the concentration changes are calculated in the **Health Module**.
 
 ### Concentration Module Methodology ###
-The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer for each of the five precursor species: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC), and a matrix layer for diesel particulate matter (DPM). By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,164 sources by 21,164 receptors. The three elevations of release height within the ISRM are:
+The InMAP Source Receptor Matrix (ISRM) links emissions sources to changes in receptor concentrations. There is a matrix layer that converts each of the five precursor species into PM<sub>2.5</sub>: primary PM<sub>2.5</sub>, ammonia (NH<sub>3</sub>), oxides of nitrogen (NOx), oxides of sulfur (SOx), and volatile organic compounds (VOC). An additional and optional matrix layer converts emissions of diesel particulate matter (DPM) into concentrations of DPM. By default, the tool uses the California ISRM. For each of these species in the California ISRM, the ISRM matrix dimensions are: 3 elevations by 21,164 sources by 21,164 receptors. The three elevations of release height within the ISRM are:
+
 * Less than 51.8 meters
 * Between 51.8 and 95 meters
 * Greater than 95 meters.
@@ -38,11 +39,22 @@ Once all layers are done:
 ### Health Module Methodology ###
 The ISRM Tool calculations health module follows US EPA BenMAP CE methodology and CARB guidance. 
 
-Currently, the tool is only built out to use the Krewski et al. (2009), endpoint parameters and functions for PM<sub>2.5</sub> .[^1] The Krewski function is as follows:
+Currently, for PM<sub>2.5</sub>, the tool is only built out to use the Krewski et al. (2009), endpoint parameters and functions.[^1] The Krewski function is as follows:
 
    ΔM = (1 - (exp(β<sub>*d*</sub> x *ΔC*<sub>*i*</sub>)<sup>-1</sup>) x *I*<sub>*i*,*d*,*g*</sub> x *P*<sub>*i*,*g*</sub>
 
 where β is the endpoint parameter from Krewski et al. (2009), *d* is the disease endpoint, *C* is the concentration of PM<sub>2.5</sub>, *i* is the grid cell, *I* is the baseline incidence, *g* is the group, and *P* is the population estimate. The tool takes the following steps to estimate these concentrations.
+
+For DPM, excess cancer risk is calculated following OEHHA (2015) methodology:
+
+Unit doses (breathing rate (BR) / body weight (BW) × exposure frequency (EF) × conversion factor(CF)) and age-specific factors (age sensitivity factor (ASF - OEHHA 2015 Table 8.3), fraction of time at home (FAH - OEHHA 2015 Table 8.4), duration adjustment (DA)) are applied across relevant age bins for either a 30- or 70-year averaging period, then multiplied by the cancer sensitivity factor (CSF = 1.1), summed by age group, and multiplied by ambient DPM concentrations (C<sub>dpm</sub>) to yield risk per million people per ISRM cell.
+
+$$\sum_{age groups} (EF \times \frac{BR}{BW} \times CF \times ASF \times FAH \times DA \times CSF) \times C_{dpm}$$
+
+Additionally, the Chronic Hazard Incidence is calculated using OEHHA's chronic exposure level:
+
+$$HQ = \frac{C_{dpm}}{5}$$
+    
 
 1. **Preprocessing**: the tool will merge the population and incidence data based on geographic intersections using the `health_data.py` object type. 
 
