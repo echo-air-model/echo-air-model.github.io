@@ -9,11 +9,11 @@ nav_order: 3
 ## Concentration Output Files
 By default, ECHO-AIR will output a number of files related to the concentration calculations.
 
-### Concentration Map
-A concentration map is generated labeled "[batch]_[run]_all emissions_concentrations.png".
+### Concentration Maps
+Concentration maps are generated labeled "[batch]_[run]_pm2.5_concentrations.png" and (when DPM is calculated) "[batch]_[run]_dpm_concentrations.png" 
 
 ### Concentration Shapefile
-After each run, a file named "shapes" will be generated, containing shapefiles labeled as "batch_run_detailed_concentration" with the following extensions: ".cpg", ".dbf", ".prj", ".shp", and ".shx". If the user enables the `DETAILED_CONC` option, then the concentrations output will contain speciated concentration data.
+After each run, a folder named "shapes" will be generated, containing shapefiles labeled as "batch_run_detailed_concentration" with the following extensions: ".cpg", ".dbf", ".prj", ".shp", and ".shx". If the user enables the `DETAILED_CONC` option, then the concentrations output will contain speciated concentration data. Concentration shapefiles will include columns for PM<sub>2.5</sub> and DPM (when enabled).
 
 Each extension serves a specific purpose:
 
