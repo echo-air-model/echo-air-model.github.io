@@ -38,7 +38,7 @@ The emissions file needs to have the following columns in order to run properly.
    * **SOX**
 * One optional emissions column.
    * **DPM**
-* **HEIGHT_M**: source release height in meters. This can be slightly imprecise, since things are binned into the three layers of the ISRM (0-57 m, 57-140 m, > 760 m)
+* **HEIGHT_M**: source release height in meters. This can be slightly imprecise, since things are binned into the three layers of the ISRM (0-51.8 m, 51.8-95 m, > 95 m)
 
 It is recommended that you also include the following two identification columns. If excluded, ECHO-AIR will assign IDs for you.
 * **I_CELL**: ID column, just needs to be unique 
