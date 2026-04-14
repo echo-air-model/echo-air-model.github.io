@@ -49,11 +49,11 @@ For DPM, excess cancer risk is calculated following OEHHA (2015) methodology:
 
 Unit doses (breathing rate (BR) / body weight (BW) × exposure frequency (EF) × conversion factor(CF)) and age-specific factors (age sensitivity factor (ASF - OEHHA 2015 Table 8.3), fraction of time at home (FAH - OEHHA 2015 Table 8.4), duration adjustment (DA)) are applied across relevant age bins for either a 30- or 70-year averaging period, then multiplied by the cancer sensitivity factor (CSF = 1.1), summed by age group, and multiplied by ambient DPM concentrations (C<sub>dpm</sub>) to yield risk per million people per ISRM cell.
 
-$$\sum_{age groups} (EF \times \frac{BR}{BW} \times CF \times ASF \times FAH \times DA \times CSF) \times C_{dpm}$$
+Σ<sub>age groups</sub> (EF x [BR/BW] x CF x ASF x FAH x DA x CSF) x C<sub>DPM</sub>
 
 Additionally, the Chronic Hazard Incidence is calculated using OEHHA's chronic exposure level:
 
-$$HQ = \frac{C_{dpm}}{5}$$
+HQ = C<sub>DPM</sub> / 5
     
 
 1. **Preprocessing**: the tool will merge the population and incidence data based on geographic intersections using the `health_data.py` object type. 
