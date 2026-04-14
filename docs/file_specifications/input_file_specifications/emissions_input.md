@@ -30,13 +30,15 @@ Emissions can be in any of the following mass units and time units.
 In the control file, you will indicate units using the abbreviated versions above (e.g., `ug/hr`)
 
 The emissions file needs to have the following columns in order to run properly. Column names are bolded with descriptions following.
-* Five emissions columns. These can have any units of mass per time, so long as they are all the same.
+* Five required emissions columns. These can have any units of mass per time, so long as they are all the same.
    * **PM25**
    * **NH3**
    * **VOC**
    * **NOX**
    * **SOX**
-* **HEIGHT_M**: source release height in meters. This can be slightly imprecise, since things are binned into the three layers of the ISRM (0-57 m, 57-140 m, > 760 m)
+* One optional emissions column.
+   * **DPM**
+* **HEIGHT_M**: source release height in meters. This can be slightly imprecise, since things are binned into the three layers of the ISRM (0-51.8 m, 51.8-95 m, > 95 m)
 
 It is recommended that you also include the following two identification columns. If excluded, ECHO-AIR will assign IDs for you.
 * **I_CELL**: ID column, just needs to be unique 

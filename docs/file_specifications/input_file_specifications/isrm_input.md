@@ -23,4 +23,8 @@ By default, the ECHO-AIR Model data set includes a sliced and reconfigured versi
    * `ISRM_SOX_LA.npy`, `ISRM_SOX_LB.npy`, `ISRM_SOX_LC.npy`
    * `ISRM_VOC_LA.npy`, `ISRM_VOC_LB.npy`, `ISRM_VOX_LC.npy`
 
+5. For optional DPM analysis, include:
+   * `ISRM_DPM_LA.npy`, `ISRM_DPM_LB.npy`, `ISRM_DPM_LC.npy`
+   * Currently these files are copies of the primary PM<sub>2.5</sub> ISRM, as the DPM-specific ISRM is under development.
+
 5. Save the feather file and numpy files into one folder. This is the ISRM input.

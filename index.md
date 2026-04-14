@@ -17,7 +17,7 @@ Last modified July 29, 2025
 ## Purpose and Goals
 The Intervention Model for Air Pollution (InMAP) is a powerful first step towards lowering key technical barriers by making simplifying assumptions that allow for streamlined predictions of PM<sub>2.5</sub> concentrations resulting from emissions-related policies or interventions.[^1] InMAP performance has been validated against observational data and WRF-Chem, and has been used to perform source attribution and exposure disparity analyses.[^2]<sup>,</sup> [^3]<sup>,</sup> [^4] The InMAP Source-Receptor Matrix (ISRM) was developed by running the full InMAP model tens of thousands of times to understand how a unit perturbation of emissions from each grid cell affects concentrations across the grid. However, both InMAP and the ISRM require considerable computational and math proficiency to run and an understanding of various atmospheric science principles to interpret. Furthermore, estimating health impacts requires additional knowledge and calculations beyond InMAP. Thus, a need arises for a standalone and user-friendly process for comparing air quality health disparities associated with various climate change policy scenarios.
 
-The ultimate goal of this repository is to create a pipeline for estimating disparities in health impacts associated with incremental changes in emissions. Annual average PM<sub>2.5</sub> concentrations are estimated using the [InMAP Source Receptor Matrix](https://www.pnas.org/doi/full/10.1073/pnas.1816102116) for California.
+The ultimate goal of this repository is to create a pipeline for estimating disparities in health impacts associated with incremental changes in emissions. Annual average PM<sub>2.5</sub> and DPM concentrations are estimated using the [InMAP Source Receptor Matrix](https://www.pnas.org/doi/full/10.1073/pnas.1816102116) for California.
 
 ----
 ## Documentation
@@ -33,10 +33,10 @@ Development on the ECHO-AIR model is ongoing, and as such this website serves as
 
 ECHO-AIR strikes a balance between the high spatial resolution required to assess PM<sub>2.5</sub> exposure disparities and the complexity of air quality modeling and was designed to support California Office of Environmental Health Hazard Assessment’s (OEHHA):
 
-* Analyses of the benefits and impacts of California’s climate policies in disadvantaged communities and to explore environmental justice disparities in PM<sub>2.5</sub> exposure and mortality. This includes evaluation of relative changes in PM<sub>2.5</sub> exposure and mortality between two or more timepoints or scenarios.
-* Estimates of PM<sub>2.5</sub> exposure using InMAP, a reduced complexity air quality model.
+* Analyses of the benefits and impacts of California’s climate policies in disadvantaged communities and to explore environmental justice disparities in PM<sub>2.5</sub> and DPM exposure and associated mortality and incidence. This includes evaluation of relative changes in exposure and mortality/incidence between two or more timepoints or scenarios.
+* Estimates of PM<sub>2.5</sub> and DPM exposure using InMAP, a reduced complexity air quality model.
  
-ECHO-AIR is well suited for projects investigating environmental justice issues, those requiring many modeling runs, or with limited resources to run complex air quality models. However, the ECHO-AIR tool is not a substitute for comprehensive chemical transport models; designed to evaluate absolute changes in PMd<sub>2.5</sub> exposure and mortality; nor appropriate to apply to the neighborhood scale due to complexities in the modeling and the need for highly spatially resolved data sets.
+ECHO-AIR is well suited for projects investigating environmental justice issues, those requiring many modeling runs, or with limited resources to run complex air quality models. However, the ECHO-AIR tool is not a substitute for comprehensive chemical transport models; designed to evaluate absolute changes in PM<sub>2.5</sub> and DPM exposure and associated mortality and incidence; nor appropriate to apply to the neighborhood scale due to complexities in the modeling and the need for highly spatially resolved data sets.
 
 ----
 ## References

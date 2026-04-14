@@ -16,6 +16,7 @@ The `concentration` object runs ISRM-based calculations for each of the vertical
 * `run_parallel`: a Boolean indicating whether or not to run in parallel
 * `output_dir`: a string pointing to the output directory
 * `output_emis_flag`: a Boolean indicating whether ISRM-allocated emissions should be output
+* `output_png_flag`: a Boolean indicating whether PNGs should be output
 * `debug_mode`: a Boolean indicating whether or not to output debug statements
 * `shp_path`: data variable file path for the border
 * `output_region`: a geodataframe containing only the region of interest
@@ -33,8 +34,8 @@ The `concentration` object runs ISRM-based calculations for each of the vertical
 ### Calculated Attributes
 * `detailed_conc`: geodataframe of the detailed concentrations at ground-level combined from all three vertical layers
 * `detailed_conc_clean`: simplified geodataframe of the detailed concentrations at ground-level combined from all three vertical layers
-* `total_conc`: geodataframe with total ground-level PM<sub>2.5</sub> concentrations across the ISRM grid
-* `summary_conc`: a geodataframe with the total ground-level PM<sub>2.5</sub> concentrations at the coarsest spatial resolution requested by the user
+* `total_conc`: geodataframe with total ground-level PM<sub>2.5</sub> and DPM (if specified) concentrations across the ISRM grid
+* `summary_conc`: a geodataframe with the total ground-level PM<sub>2.5</sub> and DPM (if specified) concentrations at the coarsest spatial resolution requested by the user
 * `crosswalk`: a pandas dataframe connecting the `ISRM_ID` with the `NAME` of the geographic sub-area (if relevant)
 
 ### Internal Functions
