@@ -7,7 +7,7 @@ nav_order: 5
 
 ## 4. Copy Data
 
-Now we will copy over the necessary data for running the pipeline. The required data files are stored in Amazon Web Services and linked on the [ECHO-AIR Data Files](https://echo-air-model.github.io/docs/getting_started/data_files.html) page. Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
+Now we will copy over the necessary data for running the pipeline. The required data files are stored in Amazon Web Services and linked on the [ECHO-AIR Data Files](https://echo-air-model.github.io/docs/file_specifications/data_files.html) page. Note that the default data assumes you are trying to run the model for California. The model has not yet been validated for other ISRMs. 
 
 The recommended method for copying the data files varies by operating system. Follow the link below to view your specific instructions.
 
